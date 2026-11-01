@@ -2,51 +2,1605 @@
 :root{--ink:#203931;--muted:#63746b;--paper:#f7f6f0;--line:#dce1d7;--green:#235943;--lime:#d7ed98}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,sans-serif}button,select{font:inherit;color:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:default}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #a15b19;outline-offset:3px}button{touch-action:manipulation}header{background:#fffdf8;border-bottom:1px solid var(--line)}.nav{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:20px 28px;gap:16px}.brand{font-weight:800;letter-spacing:-1px;font-size:24px;display:flex;align-items:center;gap:10px}.logo{background:var(--green);color:var(--lime);padding:2px 10px;border-radius:12px;letter-spacing:-3px;font-size:26px}.nav small{color:var(--muted)}.pill,.outline{border:1px solid var(--line);background:transparent;border-radius:30px;padding:9px 17px;font-size:14px;font-weight:600}.pill{background:#ecf1e5}.wrap{max-width:1160px;margin:auto;padding:36px 28px 70px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:750;color:var(--muted)}h1,h2,h3,p{margin-top:0}h1{font-family:Georgia,serif;font-weight:400;letter-spacing:-2px;font-size:clamp(38px,5vw,64px);line-height:1.08;margin:14px 0 20px}h2{font-size:24px;letter-spacing:-.7px}h3{font-size:20px;letter-spacing:-.4px}.hero{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;padding:16px 0 36px;align-items:center}.hero p{color:var(--muted);max-width:540px;font-size:17px}.daily{border:1px solid var(--line);background:#edf1e5;border-radius:20px;padding:25px;position:relative}.daily strong{font-size:32px;letter-spacing:-1px}.dots{display:flex;gap:9px;margin:16px 0}.dot{border-radius:50%;background:#fff;width:35px;height:35px;display:grid;place-items:center;border:1px solid #d3ddc9}.dot.yes{background:var(--green);color:white}.section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:12px}.section-head h2{margin:0}.muted{color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fffdf8;transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px #20393110}.art{height:150px;display:grid;place-items:center;position:relative;background:var(--tint);overflow:hidden}.art:before,.art:after{content:'';position:absolute;width:140px;height:140px;border:1px solid #20393115;border-radius:50%;left:-60px;top:70px}.art:after{left:auto;right:-40px;top:-65px;width:180px;height:180px}.game-illustration{width:100%;height:100%;position:relative;z-index:1}.mini{display:grid;grid-template-columns:repeat(3,30px);gap:4px;transform:rotate(-7deg)}.mini span{display:grid;place-items:center;background:#fffdf8;border:1.5px solid var(--ink);border-radius:6px;width:30px;height:30px;font-weight:750;box-shadow:0 3px 0 #20393115}.card-body{padding:22px;flex:1;display:flex;flex-direction:column}.card h3{margin:0 0 4px}.card p{font-size:14px;color:var(--muted);margin:10px 0 20px;flex:1}.meta{font-size:12px;display:flex;justify-content:space-between;color:var(--muted)}.play{border:0;border-radius:30px;background:var(--green);color:white;padding:11px 20px;font-weight:650}.card .play{width:100%;display:flex;justify-content:space-between}.strip{margin-top:28px;background:#eaece3;border-radius:16px;padding:22px 26px;display:flex;justify-content:space-between;gap:25px;align-items:center}.strip p{margin:5px 0 0;font-size:14px;color:var(--muted)}footer{margin-top:40px;border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:16px}.game-title{display:flex;align-items:center;gap:16px}.game-title h1{font-size:42px;margin:10px 0}.game-layout{display:grid;grid-template-columns:minmax(0,620px) 300px;gap:24px;justify-content:center;margin-top:24px}.panel{background:#fffdf8;border:1px solid var(--line);border-radius:20px;padding:26px}.game-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.timer{font-variant-numeric:tabular-nums;font-size:20px}.board{max-width:440px;margin:0 auto 20px}.grid{display:grid;gap:6px}.tile{border:1px solid #c7d1c5;background:#f4f5ed;border-radius:10px;aspect-ratio:1;font-weight:750;font-size:24px;display:grid;place-items:center;position:relative;min-width:0;padding:0}.tile.selected{background:var(--green);color:white;border-color:var(--green)}.tile.found{background:#dcecae;border-color:#b3cb7d}.tile.last{outline:3px solid #c47a29;outline-offset:-4px}.trail-board{position:relative;touch-action:none;user-select:none;-webkit-user-select:none}.trail-cell{border-radius:6px;cursor:pointer}.trail-cell.visited{background:#dfe9dc;border-color:#b9cdb6}.trail-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}.tile small{position:absolute;bottom:0;right:5px;font-size:10px;opacity:.8}.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.actions button{flex:1}.message{padding:12px 16px;background:#edf1e5;border-radius:10px;min-height:48px;margin-top:18px;font-size:14px}.instructions p,.instructions li{font-size:14px;color:var(--muted)}.instructions ol{padding-left:20px}.instructions h3{font-size:16px}.tag{display:inline-block;padding:4px 9px;border-radius:6px;background:#edf1e5;font-size:12px;margin:3px}.word-status{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-bottom:18px}.prompt{font-family:Georgia,serif;font-size:26px;line-height:1.35;margin:18px 0 25px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:10px}.choice{background:#f3f4ec;border:1px solid var(--line);border-radius:12px;padding:16px;text-align:left}.choice:hover{background:#e4edcf}.sequence{list-style:none;padding:0;display:grid;gap:9px}.step{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;padding:12px;background:#f7f7f0}.step span{flex:1;font-size:14px}.step button{border:0;background:#e7ebdd;border-radius:8px;min-width:36px;min-height:36px}.step b{color:#7a877c;font-size:12px}.result{text-align:center;background:#e9efdc;padding:35px;border-radius:20px;margin-bottom:24px}.result h2{font-family:Georgia,serif;font-size:40px;font-weight:400;margin:12px 0}.medal{font-size:54px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:24px 0}.stats strong{display:block;font-size:26px}.stats span{font-size:12px;color:var(--muted)}.badge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.badge{border:1px solid var(--line);background:white;border-radius:14px;text-align:center;padding:20px 10px;filter:grayscale(1);opacity:.5}.badge.earned{filter:none;opacity:1;background:#edf3dd}.badge b{display:block;font-size:28px}.badge span{font-size:12px}.hidden{display:none!important}.keypad{display:flex;justify-content:center;gap:10px;margin-bottom:20px}.keypad button{width:54px;height:48px;background:#e9eedf;border:1px solid #bcc9b4;border-radius:10px;font-weight:750}.hint-copy{font-size:13px;color:var(--muted);margin-top:18px}.progress{height:5px;background:#e4e9dd;border-radius:9px;overflow:hidden;margin:15px 0}.progress i{display:block;height:100%;background:var(--green)}@media(max-width:850px){.cards{grid-template-columns:repeat(2,1fr)}.game-layout{grid-template-columns:minmax(0,600px)}.instructions{order:initial}.instructions ol{margin-bottom:0}.hero{gap:24px}.nav small{display:none}}@media(max-width:560px){.wrap{padding:25px 18px 45px}.nav{padding:15px 18px}.brand{font-size:18px;white-space:nowrap}.nav{gap:10px}.nav>.pill{font-size:12px;padding:9px 12px;white-space:nowrap}.hero{grid-template-columns:1fr;gap:16px;padding-top:0}h1{letter-spacing:-1px}.cards{grid-template-columns:1fr}.art{height:125px}.card-body{padding:20px}.strip{align-items:flex-start;flex-direction:column}.panel{padding:18px}.game-title h1{font-size:32px}.game-title{gap:10px}.game-title .outline{padding:8px 12px}.badge-grid{grid-template-columns:1fr 1fr}.game-layout{margin-top:12px;gap:14px}.tile{font-size:21px}.section-head{align-items:flex-start}.section-head .muted{font-size:12px}.choices{grid-template-columns:1fr}.stats strong{font-size:22px}footer{flex-direction:column}.step{gap:8px;padding:10px}.step button{min-width:32px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}} 
 
 .office-room{height:350px;position:relative;overflow:hidden;border:2px solid #535948;border-radius:15px;background:linear-gradient(180deg,#dce3d8 0 73%,#b5b399 73%);margin-bottom:18px;isolation:isolate}.office-room:before{content:'';position:absolute;left:0;right:0;top:73%;height:3px;background:#535948}.office-window{position:absolute;left:7%;top:10%;width:24%;height:30%;border:6px solid #fcfaf0;background:linear-gradient(135deg,#aac7c8,#eaf3df);box-shadow:0 0 0 2px #747b68}.office-window:before{content:'';position:absolute;left:45%;height:100%;width:4px;background:#fcfaf0}.office-window:after{content:'';position:absolute;top:45%;width:100%;height:4px;background:#fcfaf0}.hotspot{position:absolute;border:2px solid #414d3e;border-radius:7px;font-size:12px;font-weight:700;box-shadow:0 5px 0 #20393124;transition:filter .15s,transform .15s;z-index:2;padding:8px}.hotspot:hover{filter:brightness(1.08);transform:translateY(-3px)}.hotspot.focused{outline:3px solid #a15b19;outline-offset:3px}.hotspot.solved:after{content:'✓';position:absolute;top:-12px;right:-8px;background:#235943;color:white;border:2px solid #fffdf8;border-radius:50%;width:22px;height:22px;display:grid;place-items:center}.room-desk{left:7%;bottom:13%;width:44%;height:19%;background:#b18e65;border-bottom-width:8px}.room-screen{left:16%;bottom:35%;width:26%;height:24%;background:#29473e;color:#deefb3;border:5px solid #5a6457}.room-screen:before{content:'▰  ▰  ▰';display:block;font-size:20px;letter-spacing:3px;color:#d5e398}.room-files{right:25%;bottom:15%;width:20%;height:32%;background:repeating-linear-gradient(#b0b7a0 0 32%,#63745d 32% 34%);padding-top:30px}.room-board{left:40%;top:8%;width:30%;height:23%;background:#d4b17d;border:6px solid #faf6e7;transform:rotate(-3deg)}.room-door{right:4%;bottom:20%;width:19%;height:54%;background:#758b6d;color:#fffdf8;border-width:5px}.room-door:before{content:'EXIT';display:block;position:absolute;top:-30px;left:0;right:0;background:#235943;font-size:10px;padding:2px}.room-door:after{content:'●';position:absolute;right:8%;top:55%;color:#ecd891}.office-caption{position:absolute;left:7%;top:47%;font-size:9px;color:#56614f;letter-spacing:1px}.notebook{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 20px}.clue-digit{flex:1;min-width:62px;text-align:center;background:#edf1e5;border:1px solid #d2dbc6;border-radius:9px;padding:9px 3px;font-size:10px;letter-spacing:1px}.clue-digit b{display:block;font-size:23px;letter-spacing:0}.clue-panel{background:#f5f3e9;border:1px solid #dce1d7;border-radius:13px;padding:20px;margin-bottom:20px}.clue-panel h3{font-size:19px;margin-bottom:8px}.clue-panel p{font-size:14px}.clue-panel .choice{background:#fffdf8;font-size:14px}.exit-code{width:100%;font-size:28px;letter-spacing:15px;text-align:center;padding:12px;border:1px solid #b7c3af;border-radius:10px;margin:6px 0 12px;background:white;color:#203931}.office-intro{font-size:14px;color:var(--muted)}@media(max-width:560px){.office-room{height:290px}.hotspot{font-size:10px;padding:5px}.room-screen{border-width:4px}.room-board{border-width:4px}.clue-panel{padding:16px}.room-files{right:26%}.office-caption{font-size:8px}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.win{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:30px;align-items:center;background:var(--t);color:var(--k);border-radius:28px;padding:38px;margin-bottom:24px;overflow:hidden;isolation:isolate}
+.win::before,.win::after{content:"";position:absolute;border-radius:50%;background:var(--c);z-index:-1}
+.win::before{width:440px;height:440px;right:-150px;top:-190px;opacity:.16}
+.win::after{width:180px;height:180px;left:-70px;bottom:-90px;opacity:.12}
+.win-title{font-family:Georgia,serif;font-weight:400;font-size:clamp(32px,4vw,44px);line-height:1.04;letter-spacing:-.03em;margin:0 0 12px;text-wrap:balance;animation:rise .6s cubic-bezier(.16,1,.3,1) .1s both}
+.win-sub{margin:0 0 24px;font-size:15px;line-height:1.5;color:color-mix(in srgb,var(--k) 82%,var(--t));animation:rise .6s cubic-bezier(.16,1,.3,1) .2s both}
+.ledger{margin:0 0 26px;display:grid;gap:9px;font-variant-numeric:tabular-nums}
+.ledger div{display:flex;align-items:baseline;gap:10px;animation:rise .5s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.3s + var(--i) * 70ms)}
+.ledger dt{font-size:14px;font-weight:650}
+.ledger i{flex:1;border-bottom:2px dotted currentColor;opacity:.3;transform:translateY(-4px)}
+.ledger dd{margin:0;font-size:20px;font-weight:800}
+.ledger div:first-child dd{font-size:44px;letter-spacing:-.02em;line-height:1}
+.win .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-start}.win .actions button{flex:0 0 auto;white-space:nowrap}
+.win .play{background:var(--k);color:#fff;display:inline-flex;align-items:center;gap:8px;transition:transform .15s cubic-bezier(.16,1,.3,1)}
+.win .play:hover{transform:translateX(2px)}
+.win .play:active,.win .outline:active{transform:scale(.97)}
+.win .outline{border-color:color-mix(in srgb,var(--k) 28%,transparent);background:color-mix(in srgb,#fff 55%,transparent);color:var(--k)}
+.win-note{font-size:13px;margin:14px 0 0}
+.win-art{position:relative;justify-self:center;width:min(100%,330px);aspect-ratio:1;background:#fffdf8;border-radius:26px;box-shadow:0 22px 44px -18px color-mix(in srgb,var(--k) 55%,transparent);transform:rotate(2deg);animation:card-in .7s cubic-bezier(.16,1,.3,1) both}
+.win-svg{width:100%;height:100%;display:block}
+.stamp{position:absolute;right:-26px;bottom:-26px;width:104px;height:104px;border-radius:50%;border:3px solid var(--k);background:color-mix(in srgb,var(--t) 45%,transparent);color:var(--k);display:grid;place-content:center;text-align:center;font-weight:850;font-size:14px;letter-spacing:.16em;text-transform:uppercase;outline:1.5px solid var(--k);outline-offset:3px;mix-blend-mode:multiply;transform:rotate(-12deg);animation:stamp .5s cubic-bezier(.3,1.4,.5,1) .7s both}
+.stamp small{display:block;font-size:10px;letter-spacing:.08em;opacity:.85;margin-top:4px;font-weight:700}
+.burst{position:absolute;right:26px;bottom:26px;width:0;height:0;pointer-events:none;z-index:2}
+.burst i{position:absolute;left:-4px;top:-6px;width:8px;height:13px;border-radius:2px;background:var(--p);opacity:0;animation:fly 1s cubic-bezier(.16,1,.3,1) 1s forwards}
+.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .9s cubic-bezier(.65,0,.35,1) var(--d,0s) forwards}
+.draw.slow{animation-duration:1.6s;animation-delay:.2s}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop .45s cubic-bezier(.16,1,.3,1) var(--d,0s) both}
+.slide{animation:slide .5s cubic-bezier(.16,1,.3,1) var(--d,0s) both}
+.sweep{transform-box:view-box;transform-origin:130px 130px;animation:sweep 1.8s cubic-bezier(.45,0,.2,1) .2s both}
+.door{transform-box:fill-box;transform-origin:left center;animation:door 1.1s cubic-bezier(.16,1,.3,1) .45s both}
+.beam{animation:beam 1.1s ease-out .55s both}
+.takeaways{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:8px;font-size:14px;color:var(--muted)}
+.takeaways b{color:var(--ink);letter-spacing:.08em;margin-right:6px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 24px}
+.chip{width:32px;height:32px;border-radius:10px;background:#fff;border:1.5px solid var(--line);display:grid;place-items:center;color:#fff}
+.chip.done{background:var(--c2);border-color:var(--c2)}
+.chip.now{animation:pop .5s cubic-bezier(.16,1,.3,1) 1.2s both}
+.next-game{display:flex;align-items:center;gap:12px;width:100%;margin:6px 0;padding:10px 12px 10px 10px;border:1px solid var(--line);border-radius:14px;background:#fffdf8;text-align:left;transition:background .15s,transform .15s cubic-bezier(.16,1,.3,1)}
+.next-game:hover{background:#f3f4ec;transform:translateX(2px)}
+.next-game .swatch{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center}
+.next-name{flex:1;font-weight:650;font-size:14px}
+.next-name small{display:block;font-weight:500;font-size:12px;color:var(--muted)}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+@keyframes card-in{from{opacity:0;transform:translateY(20px) rotate(7deg) scale(.95)}}
+@keyframes stamp{from{opacity:0;transform:scale(2.3) rotate(-30deg)}to{opacity:1;transform:scale(1) rotate(-12deg)}}
+@keyframes fly{0%{opacity:1;transform:translate(0,0) rotate(0)}75%{opacity:1}100%{opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--r))}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{from{opacity:0;transform:scale(.4)}}
+@keyframes slide{from{opacity:0;transform:translateX(-22px)}}
+@keyframes sweep{0%{opacity:0;transform:rotate(-200deg)}15%{opacity:1}85%{opacity:1}100%{opacity:0;transform:rotate(160deg)}}
+@keyframes door{to{transform:scaleX(.38) skewY(-6deg)}}
+@keyframes beam{from{opacity:0}}
+@media(max-width:850px){.win{grid-template-columns:1fr;padding:28px;gap:26px}.win-art{width:min(100%,290px);order:-1;margin:6px 0 10px}}
+@media(max-width:560px){.win{padding:22px 20px 26px;border-radius:22px}.ledger div:first-child dd{font-size:38px}.stamp{width:86px;height:86px;font-size:12px;right:-12px;bottom:-14px}.burst{right:30px;bottom:30px}}
+@media(prefers-reduced-motion:reduce){.win-title,.win-sub,.ledger div,.win-art,.stamp,.pop,.slide,.chip.now,.beam{animation:none}.draw{animation:none;stroke-dashoffset:0}.sweep,.burst{display:none}.door{animation:none;transform:scaleX(.38) skewY(-6deg)}}
 </style></head><body><header><nav class="nav"><div class="brand"><span class="logo">iq</span> Compliance IQ</div><small>Your daily moment of clarity</small><button class="pill" onclick="showStats()">Your progress ↗</button></nav></header><main class="wrap" id="app"></main><script>
-'use strict';
-const $=s=>document.querySelector(s), KEY='compliance-iq-v1';let storageOK=true,store;try{store=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){store={};storageOK=false}if(!store||typeof store!=='object'||Array.isArray(store))store={};store.days||={};store.wins||={};
-const today=()=>{let d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};let day=today();const dayNumber=d=>Math.floor(Date.parse(d+'T00:00:00Z')/86400000);const seed=()=>dayNumber(day), mod=(n,m)=>((n%m)+m)%m;let active=null,msg='',history=[],selected=-1,practice=false;
-const games=[{id:'weave',name:'Word Weave',desc:'Find the language of doing the right thing. Four words, one connected board.',time:'3–5 min',type:'Word finding',color:'#efe6b7',icon:['R','I','S','K','↳','D','A','T','A']},{id:'trail',name:'Audit Trail',desc:'Drag through nine checkpoints. Fill all 49 squares, leave no gap in the evidence.',time:'6–10 min',type:'Path finding',color:'#f3d7c3',icon:['1','━','┓','┏','━','┛','┗','━','2']},{id:'logic',name:'Access Logic',desc:'A little deduction goes a long way. Balance every access code.',time:'5–8 min',type:'Logic grid',color:'#dbe6d6',icon:['1','·','3','·','4','·','2','·','1']},{id:'risk',name:'Risk Radar',desc:'Read the situation. Spot the risk hiding in everyday decisions.',time:'3–5 min',type:'Categorization',color:'#dedff0',icon:['◒','◇','△','◇','!','◇','△','◇','◒']},{id:'sequence',name:'First Response',desc:'When an incident unfolds, put the response in the right order.',time:'3–5 min',type:'Sequencing',color:'#d4e7e9',icon:['1','→','2','·','↓','·','4','←','3']},{id:'office',name:'The Locked Office',desc:'Search the room. Follow the clues. Four good decisions hold the key to your escape.',time:'5–8 min',type:'Escape room',color:'#e6d7bf',icon:['▤','◇','▥','⌕','▣','⌕','1','2','?']}];
-const wordSets=[['RISK','DATA','GIFT','CODE'],['CARE','DUTY','FAIR','SAFE'],['RULE','FACT','LOCK','TEAM']];
-const cases=[['A supplier offers you a holiday in exchange for renewing their contract.','Bribery','A personal benefit tied to a business decision is an improper inducement.'],['An employee uploads customer addresses to a public file-sharing link.','Privacy','Personal data is exposed to people who do not need it.'],['You help select a vendor owned by your sibling without declaring the relationship.','Conflict','An undisclosed family interest can compromise impartial decisions.'],['A finance employee creates invoices for services that never happened.','Fraud','Fictitious invoices deliberately misrepresent business transactions.'],['A broker requests a secret payment to win a government permit.','Bribery','A hidden payment to influence an official decision is an inducement.'],['A team keeps former customers’ identity documents indefinitely without a business need.','Privacy','Keeping personal information without a defined need creates a data protection risk.'],['A manager awards paid work to a business they secretly own.','Conflict','An undisclosed financial interest compromises the manager’s impartiality.'],['A sales lead knowingly records fictional orders to receive a bonus.','Fraud','Invented transactions deliberately misrepresent performance.']];
-const incidents=[{title:'An exposed customer file',context:'You discover that a customer file is accessible through a public link. For this exercise, the approved response playbook uses this order. Actual reporting duties vary by organization.',steps:['Notify the incident lead through the urgent reporting channel.','Under the lead’s direction, revoke the public link to contain exposure.','Preserve access logs and a secure record of what happened.','Assess which data and people were affected.','Have the authorized team make required notifications.','Verify the fix and record lessons to prevent recurrence.']},{title:'A suspicious supplier payment',context:'A payment may have gone to a changed supplier account. Follow this exercise’s approved response playbook.',steps:['Alert the incident lead and finance response team.','Have authorized finance staff pause pending related payments.','Preserve invoices, messages, and transaction records.','Verify the change with the supplier using a trusted contact.','Have the response team coordinate recovery and required reporting.','Review payment controls and document improvements.']},{title:'A lost work laptop',context:'A colleague reports a missing company laptop. Follow this exercise’s approved security playbook.',steps:['Report the loss to the security incident team.','Have authorized security staff lock the device and revoke sessions.','Preserve device details and the last known activity records.','Assess whether protected information may have been exposed.','Have the authorized response team handle required notifications.','Confirm recovery actions and improve device safeguards.']}];
-function save(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){storageOK=false}}function daily(){return store.days[day]||=( {} )}function game(){return games.find(g=>g.id===active)}function state(){let st=daily()[active]||=(fresh(active));if(active==='trail'&&!st.done&&st.data.size!==TN)st.data={path:[],size:TN};return st}function fresh(id){return {elapsed:0,hints:0,mistakes:0,done:false,data:id==='weave'?{path:[],found:[]}:id==='trail'?{path:[],size:TN}:id==='logic'?{values:Array(16).fill(0)}:id==='risk'?{answers:[]}:id==='office'?{solved:[],spot:'desk',code:''}: {order:shuffle([0,1,2,3,4,5],seed())}}}function shuffle(a,s){let b=[...a];for(let i=b.length-1;i>0;i--){s=(s*1664525+1013904223)>>>0;let j=s%(i+1);[b[i],b[j]]=[b[j],b[i]]}return b}function time(n){return `${Math.floor(n/60)}:${String(n%60).padStart(2,'0')}`}function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function snapshot(){history.push(JSON.stringify(state().data));if(history.length>80)history.shift()}function commit(){save();renderGame()}function notice(s){msg=s;$('#feedback')&&( $('#feedback').textContent=s )}function doneCount(){return games.filter(g=>daily()[g.id]?.done).length}function total(){return Object.values(store.wins).reduce((a,v)=>a+Object.keys(v).length,0)}function streak(){let n=0,d=dayNumber(day);if(!store.wins[day])d--;while(store.wins[new Date(d*86400000).toISOString().slice(0,10)]){n++;d--}return n}
-function footer(){return `<footer><span>Small puzzles. Sound judgment. A daily practice in doing better.</span><span>${storageOK?'Saved on this browser · No account needed':'Browser storage unavailable · Keep this tab open'}</span></footer>`}function art(g){
-const scenes={
-weave:`<g transform="rotate(-8 160 80)"><path d="M73 61H201V107H121V81H241" fill="none" stroke="#b5973d" stroke-width="15" opacity=".35"/>${[['R',73,39],['I',113,39],['S',153,39],['K',193,39],['D',113,85],['A',153,85],['T',193,85],['A',233,85]].map(([c,x,y],i)=>`<rect x="${x}" y="${y+4}" width="34" height="36" rx="7" fill="#203931" opacity=".12"/><rect x="${x}" y="${y}" width="34" height="36" rx="7" fill="${i<4?'#fffdf5':'#d7df9a'}"/><text x="${x+17}" y="${y+25}" text-anchor="middle" font-size="22" font-weight="750" fill="#203931">${c}</text>`).join('')}</g><path d="M51 42l5-10m-5 10l-10-3M279 103l8 5m-8-5l2-9" stroke="#9e8437" stroke-width="2"/>`,
-trail:`<rect x="82" y="20" width="184" height="122" rx="15" fill="#203931" opacity=".1"/><rect x="77" y="14" width="184" height="122" rx="15" fill="#fff8ed"/><path d="M112 44H228V76H111V108H228" fill="none" stroke="#e4b18b" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/><path d="M112 44H228V76H111V108H228" fill="none" stroke="#a64f2c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${[[112,44,1],[228,76,2],[228,108,3]].map(([x,y,n])=>`<circle cx="${x}" cy="${y}" r="13" fill="#235943"/><text x="${x}" y="${y+5}" font-size="14" font-weight="700" text-anchor="middle" fill="#fffdf8">${n}</text>`).join('')}<path d="M58 87l-7 6 7 6m220-51 7 6-7 6" fill="none" stroke="#a64f2c" stroke-width="2"/>`,
-logic:`<g transform="rotate(5 170 77)"><rect x="111" y="17" width="126" height="126" rx="12" fill="#203931" opacity=".12"/><rect x="105" y="11" width="126" height="126" rx="12" fill="#fffdf6"/>${Array.from({length:16},(_,i)=>`<rect x="${112+i%4*29}" y="${18+Math.floor(i/4)*29}" width="25" height="25" rx="4" fill="${[0,2,5,7,8,10,13,15].includes(i)?'#b9cba7':'#eef1e4'}"/>`).join('')}<path d="M168 16V132M110 74H226" stroke="#607858" stroke-width="2"/>${[[124,37,1],[182,37,3],[153,66,4],[211,66,2],[124,95,2],[182,95,4],[153,124,3],[211,124,1]].map(([x,y,n])=>`<text x="${x}" y="${y}" text-anchor="middle" font-size="17" font-weight="700" fill="#203931">${n}</text>`).join('')}</g><path d="M72 52l8 8 15-18M250 111l6 6 12-15" stroke="#60805d" stroke-width="3" fill="none"/>`,
-risk:`<circle cx="170" cy="77" r="58" fill="#f4f1fa"/><circle cx="170" cy="77" r="44" stroke="#a6a3c0" fill="none"/><circle cx="170" cy="77" r="25" stroke="#a6a3c0" fill="none"/><path d="M170 19V135M112 77H228" stroke="#bcb8d2"/><path d="M170 77L170 19A58 58 0 0 1 222 103Z" fill="#8c9f88" opacity=".3"/><path d="M170 77L210 39" stroke="#235943" stroke-width="3" stroke-linecap="round"/><circle cx="195" cy="54" r="6" fill="#235943"/><circle cx="142" cy="100" r="5" fill="#a38143"/><g transform="rotate(-9 88 57)"><rect x="64" y="33" width="43" height="49" rx="7" fill="#fffdf8"/><path d="M85 43l13 24H72Z" fill="#c9abd7"/><path d="M85 51v7m0 4v1" stroke="#4c3f62" stroke-width="2"/></g><path d="M247 91l17 7v17q-7 11-17 15-11-4-17-15V98Z" fill="#235943"/><path d="M238 109l6 6 13-13" fill="none" stroke="#d7ed98" stroke-width="3"/>`,
-sequence:`<path d="M92 46H169V103H247" fill="none" stroke="#749ca0" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 7"/><path d="M240 97l8 6-8 6" fill="none" stroke="#527b7f" stroke-width="3"/>${[[73,22,1,'#fffdf8'],[146,51,2,'#edf3e9'],[221,80,3,'#b3c9b4']].map(([x,y,n,color])=>`<rect x="${x+4}" y="${y+5}" width="53" height="54" rx="10" fill="#203931" opacity=".12"/><rect x="${x}" y="${y}" width="53" height="54" rx="10" fill="${color}"/><text x="${x+26}" y="${y+36}" text-anchor="middle" fill="#235943" font-size="30" font-weight="750">${n}</text>`).join('')}<circle cx="106" cy="112" r="17" fill="#235943"/><path d="M99 112l5 5 10-12" fill="none" stroke="#d7ed98" stroke-width="3"/>`,
-office:`<path d="M64 132V24L170 9 278 25V132Z" fill="#f9f1dd"/><path d="M170 10V113L278 132V25Z" fill="#c2c8ac"/><path d="M64 132L170 113 278 132 170 150Z" fill="#b59c76"/><path d="M170 10V113" stroke="#97a085" stroke-width="1.5"/><path d="M80 39l43-6v40l-43 6Z" fill="#9abcc0" stroke="#fffdf8" stroke-width="4"/><path d="M101 36v40M81 58l42-6" stroke="#fffdf8" stroke-width="3"/><path d="M211 43l44 7v78l-44-8Z" fill="#52745b" stroke="#f5edd9" stroke-width="4"/><circle cx="246" cy="90" r="2.5" fill="#e5d39d"/><rect x="220" y="66" width="18" height="23" rx="3" fill="#d7ed98"/><path d="M225 68v-4a4 4 0 0 1 8 0v4" fill="none" stroke="#235943" stroke-width="2"/><circle cx="229" cy="76" r="2" fill="#235943"/><path d="M102 98l54-8 40 13-55 10Z" fill="#ae8156"/><path d="M103 99v27m91-23v25m-52-16v28" stroke="#74543a" stroke-width="5"/><path d="M126 71l26-3v23l-26 3Z" fill="#29483d" stroke="#6a7f66" stroke-width="3"/><path d="M132 77l14-2m-14 7l10-1" stroke="#d7ed98" stroke-width="2"/><path d="M180 36l18 3v20l-18-3Z" fill="#d4ad70"/><path d="M183 42l11 2m-11 4l8 2" stroke="#faf4df" stroke-width="2"/><path d="M73 111v17l11 3v-17Z" fill="#697f57"/><path d="M78 113q-15-21 0-16 14-19 7 6 12-9 0 12" fill="#426847"/>`
-};return `<div class="art" style="--tint:${g.color}"><svg class="game-illustration" viewBox="0 0 340 160" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><ellipse cx="170" cy="140" rx="105" ry="7" fill="#203931" opacity=".06"/>${scenes[g.id]||''}</svg></div>`}
+"use strict";
+// Daily content bank. Pools are drawn with deck(), which walks a reshuffled copy of each
+// pool so nothing repeats until the whole pool has been used; {slots} are filled per day.
+const NAMES = ["Maya", "Lee", "Noah", "Priya", "Tomás", "Aisha", "Kenji", "Elena", "Sam", "Grace", "Omar", "Lina", "Ravi", "Zoe", "Dani", "Felix", "Nadia", "Ben", "Ines", "Jun", "Sara", "Kofi", "Hana", "Leo", "Mira", "Arjun", "Chloe", "Yusuf", "Tara", "Marco"];
+const SLOTS = {
+  name: NAMES,
+  vendor: ["Bluegate Supplies", "Harbor and Pine Catering", "Lumen Print Co.", "Northfield Freight", "Cobalt Cloud Services", "Willow Street Interiors", "Keystone Security", "Brightline Travel", "Oakmont Facilities", "Silverleaf Consulting", "Riverside Tech Rentals", "Meridian Staffing"],
+  dept: ["Finance", "Procurement", "Sales", "HR", "IT", "Operations", "Marketing", "Payments", "Customer Support", "Facilities"],
+  gift: ["a weekend spa package", "front-row concert tickets", "a new smartwatch", "a luxury food hamper", "a week at a beach villa", "a designer handbag", "a top-of-the-range tablet", "season tickets to the football"],
+  data: ["customer passport scans", "payroll records", "clients’ home addresses", "card numbers from a payment batch", "account login details", "medical leave notes", "customer transaction histories", "job applicants’ CVs"],
+  kin: ["sibling", "cousin", "spouse", "partner", "uncle", "best friend", "former business partner", "brother-in-law"],
+  official: ["a customs officer", "a licensing inspector", "a city planning official", "a tax auditor", "a port authority clerk", "a building inspector"],
+};
+const WORDS = [
+  ["RISK", "Look for possible harm before you act."], ["DATA", "Protect information throughout its lifecycle."], ["GIFT", "Check the gift policy before accepting."], ["CODE", "A code of conduct guides everyday decisions."],
+  ["CARE", "Take care with other people’s information."], ["DUTY", "Your duty of care extends to customers and colleagues."], ["FAIR", "Fair dealing builds lasting trust."], ["SAFE", "Report hazards so everyone stays safe."],
+  ["RULE", "Rules make expectations clear for everyone."], ["FACT", "Decisions should rest on verified facts."], ["LOCK", "Lock your screen whenever you step away."], ["TEAM", "A strong team raises concerns early."],
+  ["LEAK", "Report a suspected data leak straight away."], ["LOGS", "Logs show who did what, and when."], ["OATH", "Promises to customers deserve to be kept."], ["PLAN", "A response plan turns panic into steps."],
+  ["BIAS", "Check your decisions for hidden bias."], ["CASH", "Large cash transactions deserve a closer look."], ["FEES", "Unexplained fees can hide improper payments."], ["FILE", "File records where the team can find them."],
+  ["FLAG", "Raise a flag when something feels off."], ["FUND", "Client funds stay separate and accounted for."], ["HACK", "Unexpected login prompts can be a hack attempt."], ["HOLD", "A legal hold pauses normal deletion."],
+  ["KEYS", "Never share your keys or passwords."], ["LAWS", "Know the laws that apply to your role."], ["LOAN", "Lending decisions need accurate applicant data."], ["NOTE", "Note down what happened while it is fresh."],
+  ["ROLE", "Access should match your role, nothing more."], ["SCAN", "Scan attachments before you open them."], ["SEAL", "Sealed documents stay confidential."], ["SIGN", "Read before you sign."],
+  ["SPAM", "Report suspicious emails; don’t just delete them."], ["TERM", "Contract terms define what each side owes."], ["TEST", "Test controls to prove they work."], ["USER", "Every user account needs a named owner."],
+  ["WARN", "Heed warnings from your security tools."], ["WIPE", "Wipe old devices before disposal."], ["SCAM", "Urgency and secrecy are classic scam signs."], ["MULE", "Money mules move criminal funds, often unknowingly."],
+  ["WIRE", "Verify wire instructions through a known contact."], ["BANK", "Bank detail changes need independent checks."], ["BOND", "Trust is a bond earned through consistency."], ["VETO", "Anyone can pause a step that feels unsafe."],
+  ["PEER", "A peer review catches what one person misses."], ["MASK", "Mask card numbers and IDs on screen."], ["LINK", "Hover before you click a link."], ["EDIT", "Edits to records should leave a trail."],
+  ["DEBT", "Hidden debts can create pressure to cut corners."], ["TRUE", "Keep records true and complete."], ["MEMO", "A short memo can record a key decision."], ["VOID", "Void unused approvals so they can’t be reused."],
+  ["GATE", "Gatekeepers check before access is granted."], ["WALL", "Information walls keep sensitive deals separate."], ["TONE", "Tone from the top shapes the whole culture."], ["CASE", "Every case deserves the same fair process."],
+  ["CLUE", "Small clues often reveal bigger risks."], ["VOTE", "Declare conflicts before you vote."], ["HELP", "Ask for help when a rule is unclear."], ["PASS", "Passwords should be long and unique."],
+  ["OPEN", "Open conversations prevent hidden problems."], ["TIPS", "Speak-up tips deserve careful follow-up."], ["TIME", "Report incidents in time to make a difference."], ["SHOW", "Show your working: evidence beats memory."],
+];
+const RISK_CATS = ["Bribery", "Privacy", "Conflict", "Fraud"];
+const RISK = {
+  Bribery: [
+    ["{vendor} offers {name} {gift} if the contract renewal goes their way.", "A personal benefit tied to a business decision is an improper inducement."],
+    ["A broker asks {name} to approve a “facilitation fee” of {amount} so {official} will speed up a permit.", "A payment to influence an official’s decision is bribery, whatever it is called."],
+    ["{name} in {dept} is promised a job for their {kin} if a tender is steered toward {vendor}.", "Offering a favour to a relative in return for a business decision is still a bribe."],
+    ["A distributor suggests adding {amount} to an invoice “for the inspector” who signs off a shipment.", "Hidden payments routed through invoices to influence an official are bribery."],
+    ["{vendor} quietly pays for {name}’s family holiday while a pricing review is open.", "Hospitality given during a live decision, and kept quiet, is an improper inducement."],
+    ["{name} is told a licence will be approved faster if cash is left in an envelope for {official}.", "Cash to speed up an official decision is a bribe."],
+    ["A bidder offers to sponsor {name}’s charity run, on condition that their bid is shortlisted.", "A donation that depends on a business outcome is an inducement."],
+    ["After a government contract is won, an agent requests a “success bonus” of {amount} and won’t say who receives it.", "Unexplained success fees to third parties near officials are a classic bribery red flag."],
+    ["{vendor} sends {name} {gift} the week before {name} scores their proposal.", "A valuable gift timed with a decision is designed to influence it."],
+    ["{official} hints that a fine could “go away” for a personal payment from {name}.", "Paying an official personally to avoid a penalty is bribery."],
+    ["A consultant asks {name} to inflate their fee by {amount} so it can be “shared” with a client’s purchasing manager.", "Kickbacks passed through inflated fees are bribery."],
+    ["{name} accepts free use of a holiday home from {vendor} in exchange for extending their payment terms.", "A personal benefit traded for a commercial concession is an inducement."],
+    ["A supplier offers {name} a personal cut of every order {name} places with them.", "Personal commissions for steering orders are kickbacks."],
+    ["To win a hospital contract, a sales rep proposes paying for a buyer’s “study trip” that is mostly sightseeing.", "Lavish trips for decision-makers, disguised as business, are inducements."],
+    ["Just before a tender closes, {vendor} offers {name} {amount} in “consulting fees” for a report nobody needs.", "Payments for sham services are a common way to disguise bribes."],
+    ["A broker says {name}’s application will clear today if they add a “tip” for {official}.", "Small payments to speed up official action are still bribes under most policies."],
+    ["{vendor} offers to repair {name}’s car for free while their framework agreement is up for renewal.", "Free personal services during a decision are an inducement."],
+    ["A prospective client asks {name} to provide {gift} for their purchasing head before signing.", "Giving valuables to secure a deal is bribery, even when the client asks for it."],
+  ],
+  Privacy: [
+    ["{name} uploads {data} to a public file-sharing link to send them to a colleague.", "Personal data is exposed to anyone who has the link."],
+    ["The {dept} team keeps {data} indefinitely, with no reason to hold them.", "Keeping personal information with no defined need is a data protection risk."],
+    ["{name} emails {data} to a personal account to work on at home.", "Moving personal data outside approved systems puts it at risk."],
+    ["A spreadsheet of {data} is pinned in a company-wide chat channel.", "Personal data is shared far beyond the people who need it."],
+    ["{name} looks up a celebrity customer’s account out of curiosity.", "Accessing personal records without a business need is a privacy breach."],
+    ["{data} are reused for a marketing campaign customers never agreed to.", "Using personal data for an unrelated purpose without consent is a privacy risk."],
+    ["{name} leaves printed {data} on a shared printer overnight.", "Unattended printouts expose personal data to anyone passing."],
+    ["{name} shares their login with a temp in {dept} so the temp can “see everything”.", "Shared credentials give someone access to data they are not authorised to see."],
+    ["{vendor} is sent a full copy of {data} when it only needed postcodes.", "Sharing more personal data than the task needs breaks data minimisation."],
+    ["{name} posts a screenshot of a support ticket, customer name visible, on social media.", "Publishing a customer’s details without consent is a privacy breach."],
+    ["An unencrypted USB stick holding {data} goes missing after a conference.", "Unprotected personal data on a lost device may be exposed."],
+    ["{name} keeps copies of {data} on a personal laptop after moving out of {dept}.", "Access to personal data should end when the role ends."],
+    ["A customer asks what data is held about them, and {name} is told to ignore the request.", "People have rights over their data; ignoring requests is a privacy failure."],
+    ["A new app feature quietly records customers’ location in the background.", "Collecting personal data without telling people is a privacy risk."],
+    ["{name} reads {data} aloud on a phone call in a crowded café.", "Discussing personal data in public lets others overhear it."],
+    ["A shared drive containing {data} is open to every contractor in the company.", "Access should match need; broad access exposes personal data."],
+    ["{name} photographs a customer’s ID on a personal phone to “save time”.", "Personal devices sit outside the controls that protect sensitive data."],
+    ["Old laptops holding {data} are sold without being wiped.", "Disposed devices must be wiped, or the data leaves with them."],
+  ],
+  Conflict: [
+    ["{name} helps select {vendor}, which is owned by their {kin}, without saying so.", "An undisclosed family interest can compromise impartial decisions."],
+    ["A manager in {dept} awards paid work to a business they secretly own.", "An undisclosed financial interest compromises impartiality."],
+    ["{name} interviews their {kin} for a role in {dept} and scores them highest.", "Assessing a relative creates a conflict that should be declared and managed."],
+    ["{name} holds shares in {vendor} and sits on the panel reviewing its bid.", "A financial stake in a bidder must be declared before taking part."],
+    ["{name} runs a side business that competes for the company’s own clients, and says nothing.", "Undeclared outside interests can pull loyalty away from the employer."],
+    ["{name} approves the expense claims of their {kin}, who also works in {dept}.", "Approving a relative’s claims undermines independent review."],
+    ["{name} is negotiating a job offer from {vendor} while still managing its contract.", "Pending employment with a counterparty affects judgement and should be declared."],
+    ["{name} sits on the board of a charity applying for the company’s community grant.", "An outside role linked to a decision should be disclosed, and the person should step back."],
+    ["A {dept} lead hires {vendor} without other quotes because it is run by a close {kin}.", "Personal relationships that influence supplier choice must be declared."],
+    ["{name} sets the price for a property deal in which their {kin} is the buyer.", "Acting on both sides of a deal is a conflict of interest."],
+    ["{name} is asked to audit a process they designed and still run.", "Reviewing your own work removes independence; the conflict should be flagged."],
+    ["{name} is dating the account manager at {vendor} and still signs off its invoices.", "A close personal relationship with a supplier should be declared and the approval reassigned."],
+    ["{name} invests personally in a startup that {dept} is evaluating as a partner.", "A personal investment in a potential partner must be declared."],
+    ["{name} is asked to investigate a complaint against their {kin}.", "Investigating someone close to you compromises fairness; the case should be reassigned."],
+    ["{name} sets the team bonus pool, including their own payout, with no second approver.", "Deciding your own benefit without oversight is a conflict."],
+    ["{name}’s {kin} is a director at {vendor}, which {name} is about to audit.", "A close tie to an audited party must be declared and the audit reassigned."],
+    ["{name} takes a paid weekend job with a client of {dept} without telling anyone.", "Undeclared outside work for a client can divide loyalty."],
+    ["{name} chairs the panel choosing a training provider their {kin} co-founded.", "A family link to a candidate supplier must be declared before the panel meets."],
+  ],
+  Fraud: [
+    ["A {dept} employee creates invoices for services that never happened.", "Fictitious invoices deliberately misrepresent transactions."],
+    ["{name} records fictional orders to reach a sales bonus.", "Invented transactions misrepresent performance."],
+    ["{name} submits taxi receipts for trips taken on holiday.", "Claiming personal costs as business expenses is fraud."],
+    ["An email from a look-alike address asks {name} to change {vendor}’s bank details today.", "Payment-diversion scams impersonate suppliers; verify through a known contact."],
+    ["{name} backdates a contract so its revenue lands in the earlier quarter.", "Altering dates to misstate results is deliberate misrepresentation."],
+    ["A team lead asks {name} to sign timesheets for hours nobody worked.", "Paying for hours not worked is fraud."],
+    ["{name} sets up a “vendor” account that pays into their own bank.", "A ghost vendor channels company money to an insider."],
+    ["{name} splits a {amount} purchase into small orders to avoid needing approval.", "Splitting purchases to dodge approval limits is a common fraud tactic."],
+    ["Stock written off as “damaged” is actually being sold online by {name}.", "Misreporting assets in order to take them is fraud."],
+    ["{name} adds a few extra miles to every mileage claim.", "Small, repeated false claims are still fraud."],
+    ["A caller claiming to be the CEO tells {name} to wire {amount} urgently and keep it secret.", "Urgency plus secrecy is the signature of CEO fraud; verify through a known channel."],
+    ["{name} edits a customer’s income figures so their loan application passes.", "Falsifying application data to win approval is fraud."],
+    ["Refunds keep going to the same card, which belongs to {name} in {dept}.", "Routing refunds to yourself is fraud."],
+    ["A manager asks {name} to leave a known product defect out of the quarterly report.", "Concealing material facts misleads stakeholders, which is fraud."],
+    ["{name} reuses the same hotel receipt across two expense claims.", "Duplicate claims are a deliberate false representation."],
+    ["Targets are met by shipping goods nobody ordered, then quietly reversing them next quarter.", "Channel stuffing misstates revenue."],
+    ["{name} signs off a {amount} delivery of goods that never arrived.", "Approving undelivered goods enables a fraudulent payment."],
+    ["A fake payroll email captures {name}’s password, and their salary is redirected to a new account.", "Payroll diversion is fraud; changes to pay details need verification."],
+  ],
+};
+const INCIDENTS = [
+  ["An exposed customer file", "{name} discovers that a customer file is accessible through a public link.", ["Notify the incident lead through the urgent reporting channel.", "Under the lead’s direction, revoke the public link to contain exposure.", "Preserve access logs and a secure record of what happened.", "Assess which data and people were affected.", "Have the authorised team make required notifications.", "Verify the fix and record lessons to prevent recurrence."]],
+  ["A suspicious supplier payment", "A payment to {vendor} may have gone to a changed bank account.", ["Alert the incident lead and finance response team.", "Have authorised finance staff pause pending related payments.", "Preserve invoices, messages, and transaction records.", "Verify the change with {vendor} using a trusted contact.", "Have the response team coordinate recovery and required reporting.", "Review payment controls and document improvements."]],
+  ["A lost work laptop", "{name} reports that their company laptop is missing.", ["Report the loss to the security incident team.", "Have authorised security staff lock the device and revoke sessions.", "Preserve device details and the last known activity records.", "Assess whether protected information may have been exposed.", "Have the authorised response team handle required notifications.", "Confirm recovery actions and improve device safeguards."]],
+  ["A phishing click", "{name} in {dept} clicked a link in a fake login email and entered their password.", ["Report the click to the security team straight away.", "Have security reset the password and end active sessions.", "Preserve the email and its headers as evidence.", "Check the account’s activity for unauthorised access.", "Have the authorised team notify anyone affected if data was accessed.", "Share the lesson and run a phishing refresher."]],
+  ["A bribe on the table", "A representative of {vendor} offers {name} cash to approve their tender.", ["Decline the offer clearly and accept nothing.", "Report it to the compliance team promptly.", "Write down what was said, when, and by whom.", "Step back from the tender decision while it is reviewed.", "Let compliance decide on investigation and any reporting.", "Review the tender for other red flags and record the outcome."]],
+  ["A ransom note on a shared drive", "Files on a {dept} shared drive have been encrypted, and a ransom note has appeared.", ["Disconnect the affected computer from the network.", "Report the incident to the IT security hotline.", "Preserve the ransom note and system logs without wiping anything.", "Identify which systems and files are affected.", "Have leadership and authorised teams handle notifications and decisions.", "Restore from clean backups and close the entry point."]],
+  ["A misdirected payroll email", "{name} emailed a file of payroll records to the wrong external address.", ["Report it to the privacy team immediately.", "Through the privacy team, ask the recipient to delete the email and confirm.", "Keep a copy of the sent email and the recipient’s reply.", "Assess whose data was in the file and how sensitive it is.", "Have the privacy team make any required notifications.", "Add recipient checks for files containing personal data."]],
+  ["Duplicated expense claims", "An analyst notices that one manager’s expense claims appear to be duplicated.", ["Avoid confronting the manager directly.", "Report the pattern confidentially to the fraud team.", "Preserve the claims and receipts without altering them.", "Let investigators review the full claim history.", "Have authorised staff decide on disciplinary and reporting steps.", "Strengthen expense checks for duplicate receipts."]],
+  ["A slip in the warehouse", "A colleague slips on a wet floor in the {dept} warehouse.", ["Make sure the person is safe and get first aid.", "Make the area safe so no one else slips.", "Report the incident to the site safety lead.", "Record what happened, with photos of the area.", "Investigate why the floor was wet.", "Fix the cause and share the lessons with the site."]],
+  ["Cash deposits just under the limit", "A new customer has deposited large sums in cash, just below the reporting threshold, several days in a row.", ["Complete the transaction normally without alerting the customer.", "Record the transactions and what made them unusual.", "Escalate internally to the money laundering reporting officer.", "Let the reporting officer review the account and decide on a report.", "Follow the reporting officer’s instructions on the account.", "Add the pattern to future monitoring training."]],
+  ["A sanctions screening alert", "Payment screening flags a beneficiary whose name is close to a sanctions list entry.", ["Hold the payment as the screening procedure requires.", "Escalate the alert to the sanctions compliance team.", "Gather the payment details and supporting documents.", "Let compliance confirm whether it is a true match.", "Have compliance handle any blocking and regulatory reports.", "Record the decision and the evidence behind it."]],
+  ["Plans leaked online", "{name} sees confidential product plans posted on a public forum.", ["Avoid sharing or commenting on the post.", "Report it to the security team.", "Capture screenshots and the link as evidence.", "Help identify where the leak may have come from.", "Let authorised teams request a takedown and handle any notices.", "Review who had access to the plans and tighten it."]],
+  ["An unbadged visitor", "A visitor without a badge follows staff through a secure door into {dept}.", ["Politely ask the person who they are visiting.", "Escort them to reception rather than leaving them alone.", "Report the incident to building security.", "Note the time, the door, and a description.", "Let security check footage and whether anything was accessed.", "Remind the team not to hold secure doors open."]],
+  ["An anonymous concern", "{name} receives an anonymous message alleging that a manager is falsifying sales figures.", ["Acknowledge the report without trying to identify the sender.", "Pass the report to the speak-up channel.", "Keep the message secure and share it with no one else.", "Let compliance assess the allegation.", "Have independent investigators handle any inquiry.", "Protect the reporter from retaliation and record the outcome."]],
+  ["A gift at the door", "{vendor} delivers {gift} to {name}’s home.", ["Set the gift aside without using it.", "Report it to your manager and the compliance team.", "Record the gift in the gift register with its value.", "Follow compliance’s decision to return or donate it.", "Send {vendor} a polite note about the gift policy.", "Note the event in the supplier relationship file."]],
+  ["Customer data in a public AI tool", "{name} pasted customer complaints, names included, into a public AI chatbot.", ["Stop using the tool for the task.", "Report it to the privacy team.", "Record what was pasted and when.", "Assess what personal data was shared.", "Have the privacy team decide on deletion requests and notifications.", "Update guidance on approved AI tools."]],
+  ["An unapproved change", "A system change went live without approval, and customer payments are failing.", ["Alert the incident manager.", "Roll back the change under the incident manager’s direction.", "Preserve the change logs and deployment record.", "Assess which customers and payments were affected.", "Have authorised teams update customers and regulators if needed.", "Review change controls and record lessons."]],
+  ["A missing courier package", "A courier package of signed customer contracts never arrived.", ["Confirm with the courier that the package is missing.", "Report the loss to the privacy team.", "Keep the tracking record and dispatch details.", "List which customers’ documents were inside.", "Have the privacy team handle notifications.", "Switch to secure digital delivery for contracts."]],
+  ["Transactions a customer didn’t make", "A customer reports card transactions they didn’t make.", ["Freeze the card under the fraud procedure.", "Log the report with the fraud team.", "Preserve transaction and login records.", "Investigate how the account was accessed.", "Have the fraud team handle refunds and required reports.", "Tell the customer the outcome and how to stay safe."]],
+  ["A pricing chat at a trade fair", "At a trade fair, a competitor suggests to {name} that both firms “keep prices steady” next year.", ["Refuse to discuss pricing, and say so clearly.", "Leave the conversation.", "Write a note of what was said, by whom, and when.", "Report it to the legal team promptly.", "Let legal decide on any further action.", "Refresh the team on competition law at events."]],
+  ["An error in a filed report", "{name} spots an error in a report already sent to the regulator.", ["Tell your manager and the compliance team.", "Pause further reports that use the same data.", "Preserve the submitted version and the source data.", "Work out the size and cause of the error.", "Have compliance contact the regulator with a correction.", "Fix the data checks that missed it."]],
+  ["A stray USB stick", "{name} finds an unlabelled USB stick in the car park.", ["Don’t plug it into any device.", "Hand it to the IT security team.", "Note where and when it was found.", "Let security examine it safely.", "Have security alert staff if it was a planned attack.", "Share a reminder about unknown devices."]],
+  ["A supplier’s data breach", "{vendor} reports that its systems were breached and your customer data may be involved.", ["Escalate the notice to the incident lead.", "Through the lead, ask {vendor} to contain and confirm the scope.", "Keep all communications with {vendor} on record.", "Assess which of your customers are affected.", "Have the authorised team make required notifications.", "Review {vendor}’s security terms and monitoring."]],
+  ["An overheard share tip", "{name} overhears a colleague planning to buy shares before an unannounced acquisition.", ["Don’t trade or pass the information on.", "Report the concern to compliance confidentially.", "Note what you heard, when, and where.", "Let compliance review trading records.", "Have compliance handle any reporting to the regulator.", "Remind staff about insider lists and blackout periods."]],
+];
 
-function home(){active=null;history=[];practice=false;let count=doneCount();$('#app').innerHTML=`<section class="hero"><div><div class="eyebrow">The daily brain break · ${new Date(day+'T12:00:00').toLocaleDateString(undefined,{month:'short',day:'numeric'})}</div><h1>A little play.<br>A sharper instinct.</h1><p>Six small challenges for a more thoughtful workday. Build your compliance instincts, one satisfying solve at a time.</p></div><aside class="daily"><div class="eyebrow">Your daily six</div><div style="margin-top:10px"><strong>${count}<span style="font-size:20px;color:var(--muted)"> / ${games.length}</span></strong> <span class="muted">puzzles complete</span></div><div class="dots">${games.map((g,i)=>`<span class="dot ${daily()[g.id]?.done?'yes':''}">${daily()[g.id]?.done?'✓':i+1}</span>`).join('')}</div><span style="font-size:13px">${count===games.length?'A clean sweep. See you tomorrow!':count?'Nice momentum. Keep your curiosity going.':'A fresh start. Pick a puzzle below.'}</span></aside></section><div class="section-head"><h2>Today’s games</h2><span class="muted">Edition ${mod(seed(),999)+1} · New puzzles daily</span></div><section class="cards">${games.map(g=>`<article class="card">${art(g)}<div class="card-body"><div class="meta"><span>${g.type}</span><span>${g.time}</span></div><h3 style="margin-top:12px">${g.name}</h3><p>${g.desc}</p><button class="play" onclick="openGame('${g.id}')"><span>${daily()[g.id]?.done?'View results':daily()[g.id]?'Continue playing':'Play puzzle'}</span><span>${daily()[g.id]?.done?'✓':'↗'}</span></button></div></article>`).join('')}</section><div class="strip"><div><strong>Not a test. A little training for your instincts.</strong><p>Learn as you play, use a hint when you need one, and find your own pace.</p></div><span class="pill">${streak()} day streak ✦</span></div>${footer()}`}
-function openGame(id){active=id;history=[];selected=-1;practice=false;msg='';state();save();renderGame();window.scrollTo(0,0)}function words(){return wordSets[mod(seed(),3)]}function wordPaths(){let paths=[[0,1,2,3],[7,11,15,14],[13,12,8,4],[5,6,10,9]],turns=mod(seed(),4);return paths.map(path=>path.map(i=>{let r=Math.floor(i/4),c=i%4;for(let k=0;k<turns;k++)[r,c]=[c,3-r];return r*4+c}))}function letters(){let cells=Array(16);words().forEach((w,r)=>wordPaths()[r].forEach((i,c)=>cells[i]=w[c]));return cells}function wordOwner(i){return wordPaths().findIndex(p=>p.includes(i))}function foundTiles(){let d=state().data;return d.found.flatMap(w=>d.routes?.[w]||wordPaths()[words().indexOf(w)])}function adjacent(a,b,n){return Math.abs(Math.floor(a/n)-Math.floor(b/n))+Math.abs(a%n-b%n)===1}const TN=7,TC=TN*TN,TK=9,trailCache={};let dragging=false;function trailSolution(){let s=seed();if(trailCache[s])return trailCache[s];let r=Math.imul(s+1,2654435761)>>>0,rnd=n=>(r=(Math.imul(r,1664525)+1013904223)>>>0,(r>>>16)%n),p=[];for(let y=0;y<TN;y++)for(let x=0;x<TN;x++)p.push(y*TN+(y%2?TN-1-x:x));for(let t=0;t<6000;t++){if(rnd(2))p.reverse();let e=p.at(-1),nb=[e-TN,e+TN,e%TN?e-1:-1,e%TN<TN-1?e+1:-1].filter(v=>v>=0&&v<TC&&v!==p.at(-2)),v=nb[rnd(nb.length)],tail=p.splice(p.indexOf(v)+1);p.push(...tail.reverse())}return trailCache[s]=p}function checkpoints(){let sol=trailSolution(),s=seed(),idx=[0];for(let k=1;k<TK-1;k++)idx.push(k*6+(Math.imul(s+k*7919,2654435761)>>>13)%5-2);idx.push(TC-1);return Object.fromEntries(idx.map((v,i)=>[sol[v],i+1]))}function logicSolution(){let base=[1,2,3,4,3,4,1,2,2,1,4,3,4,3,2,1],shift=mod(seed(),4);return base.map(x=>(x-1+shift)%4+1)}function givens(){return mod(seed(),2)?[0,3,5,6,9,10,12,15]:[0,2,5,7,8,10,13,15]}function logicValues(){return logicSolution().map((v,i)=>givens().includes(i)?v:state().data.values[i])}function incident(){return incidents[mod(seed(),3)]}function caseAt(i){return cases[mod(i+seed(),8)]}
-const rules={office:['Inspect the four objects in the office. Each contains a small compliance puzzle.','Solve each clue to collect a digit. Your notebook saves everything you discover.','Select the exit door, then enter the digits in DESK → SCREEN → FILES → BOARD order. This is a fictional training room.'],weave:['Find four words, using every tile exactly once.','Tap adjacent letters horizontally or vertically, then submit the word. Each word has four letters.','Tap your last tile or Undo to step back. Found words stay highlighted.'],trail:['Start at checkpoint 1 and connect all nine checkpoints in numerical order.','Drag (or tap) horizontally or vertically. Fill all 49 squares exactly once, finishing on checkpoint 9. Arrow keys work too.','Drag back over your line, or tap an earlier cell, to rewind. A hint extends the reference path, or points out a branch to revisit.'],logic:['Fill the 4 × 4 grid with codes 1, 2, 3, and 4.','Each row, column, and bold 2 × 2 region must contain each code once. Dark numbers are fixed.','Select a cell, then use the code buttons or keyboard. Any valid completed grid is accepted.'],risk:['Read eight workplace situations and identify the primary risk.','Choose Bribery, Privacy, Conflict, or Fraud. Every choice comes with an explanation.','A wrong answer stays on the current card so you can learn and try again.'],sequence:['Read the response playbook for today’s incident.','Use the up and down arrows to arrange six actions from first to last.','The scenario and hint show the approved order for this exercise. Check your sequence when ready.']};
-function renderGame(){let s=state(),g=game();if(s.done&&!practice){results();return}let body='';if(active==='office')body=officeBody();if(active==='weave'){body=`<div class="word-status">${words().map((w,i)=>`<span class="tag">${s.data.found.includes(w)?w+' ✓':`Word ${i+1} · 4 letters`}</span>`).join('')}</div><div class="board grid" style="grid-template-columns:repeat(4,1fr)">${letters().map((c,i)=>`<button aria-label="${c}, row ${Math.floor(i/4)+1}, column ${i%4+1}" class="tile ${s.data.path.includes(i)?'selected':''} ${foundTiles().includes(i)?'found':''}" onclick="wordTap(${i})">${c}</button>`).join('')}</div><div style="text-align:center;letter-spacing:5px;min-height:36px;font-weight:700">${s.data.path.map(i=>letters()[i]).join('')||'· · · ·'}</div><button class="play" style="width:100%;margin-bottom:20px" onclick="submitWord()">Submit word</button>`}if(active==='trail'){let cp=checkpoints(),path=s.data.path,pt=i=>`${i%TN+.5},${Math.floor(i/TN)+.5}`;body=`<div class="board trail-board" onpointerdown="trailDown(event)"><div class="grid" style="grid-template-columns:repeat(${TN},1fr);gap:3px">${Array.from({length:TC},(_,i)=>`<button data-cell="${i}" aria-label="Row ${Math.floor(i/TN)+1}, column ${i%TN+1}${cp[i]?', checkpoint '+cp[i]:''}${path.includes(i)?', visited step '+(path.indexOf(i)+1):''}" class="tile trail-cell ${path.includes(i)?'visited':''} ${path.at(-1)===i?'last':''}" onclick="if(!event.detail)trailTap(${i})"></button>`).join('')}</div><svg class="trail-svg" viewBox="0 0 ${TN} ${TN}" aria-hidden="true">${path.length>1?`<polyline points="${path.map(pt).join(' ')}" fill="none" stroke="#235943" stroke-width=".34" stroke-linecap="round" stroke-linejoin="round"/>`:''}${path.length?`<circle cx="${path.at(-1)%TN+.5}" cy="${Math.floor(path.at(-1)/TN)+.5}" r=".2" fill="#c47a29"/>`:''}${Object.entries(cp).map(([i,n])=>`<circle cx="${i%TN+.5}" cy="${Math.floor(i/TN)+.5}" r=".33" fill="${path.includes(+i)?'#235943':'#203931'}" stroke="#fffdf6" stroke-width=".06"/><text x="${i%TN+.5}" y="${Math.floor(i/TN)+.5}" dy=".14" text-anchor="middle" font-size=".38" font-weight="750" fill="#fff">${n}</text>`).join('')}</svg></div><p style="text-align:center" class="muted">${path.length} / ${TC} cells · ${Object.keys(cp).filter(i=>path.includes(+i)).length} / ${TK} checkpoints</p>`}if(active==='logic'){body=`<div class="board grid" style="grid-template-columns:repeat(4,1fr);gap:3px">${logicValues().map((v,i)=>`<button class="tile ${selected===i?'selected':''}" style="${givens().includes(i)?'background:#e3e8d9;color:#203931;':''}${i%4===1?'border-right:3px solid #56654f;':''}${Math.floor(i/4)===1?'border-bottom:3px solid #56654f;':''}" aria-label="Row ${Math.floor(i/4)+1}, column ${i%4+1}, ${v||'empty'}${givens().includes(i)?', fixed':''}" onclick="selectCell(${i})">${v||''}</button>`).join('')}</div><div class="keypad">${[1,2,3,4,0].map(v=>`<button onclick="put(${v})" aria-label="${v?'Enter '+v:'Clear cell'}">${v||'⌫'}</button>`).join('')}</div><button class="play" style="width:100%;margin-bottom:20px" onclick="checkLogic()">Check grid</button>`}if(active==='risk'){let n=s.data.answers.length;body=`<div class="eyebrow">Situation ${n+1} of 8</div><div class="progress"><i style="width:${n/8*100}%"></i></div><p class="prompt">${caseAt(n)[0]}</p><div class="choices">${['Bribery','Privacy','Conflict','Fraud'].map(c=>`<button class="choice" onclick="answer('${c}')">${c} <span style="float:right">↗</span></button>`).join('')}</div><p class="hint-copy">Choose the primary risk. More than one issue can exist in a real situation.</p>`}if(active==='sequence'){body=`<div class="eyebrow">${incident().title}</div><p class="muted" style="font-size:14px;margin-top:10px">${incident().context}</p><details style="font-size:14px"><summary>Read the approved playbook</summary><ol>${incident().steps.map(t=>`<li>${t}</li>`).join('')}</ol></details><ol class="sequence">${s.data.order.map((v,i)=>`<li class="step"><b>${i+1}</b><span>${incident().steps[v]}</span><button aria-label="Move step ${i+1} up" ${i===0?'disabled':''} onclick="move(${i},-1)">↑</button><button aria-label="Move step ${i+1} down" ${i===5?'disabled':''} onclick="move(${i},1)">↓</button></li>`).join('')}</ol><button class="play" style="width:100%;margin-bottom:20px" onclick="checkSequence()">Check sequence</button>`}
-$('#app').innerHTML=`<div class="section-head"><div class="game-title"><button class="outline" onclick="home()" aria-label="Back to game directory">←</button><div><div class="eyebrow">Daily ${game().type} · Edition ${mod(seed(),999)+1}</div><h1>${g.name}</h1></div></div></div><div class="game-layout"><section class="panel"><div class="game-top"><span class="pill">${practice?'Completed puzzle':g.time+' · Take your time'}</span><span class="timer" id="timer" aria-label="Elapsed time">${time(s.elapsed)}</span></div>${body}<div class="actions"><button class="outline" onclick="undo()" ${!history.length?'disabled':''}>↶ Undo</button><button class="outline" onclick="hint()">✧ Hint</button><button class="outline" onclick="resetGame()">Reset</button></div><div class="message" id="feedback" role="status" aria-live="polite">${esc(msg||'You’ve got this. Take it one move at a time.')}</div></section><aside class="panel instructions"><h3>How to play</h3><ol>${rules[active].map(r=>`<li style="margin-bottom:12px">${r}</li>`).join('')}</ol><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3>A little help is welcome.</h3><p>Hints cost 30 points; incorrect checks cost 15. Time is for your own pace and does not reduce your score.</p><div class="tag">${s.hints} hints used</div><div class="tag">${s.mistakes} incorrect checks</div><p class="hint-copy">Progress saves automatically on this browser. The next edition arrives at local midnight.</p></aside></div>${footer()}`}
-function editable(){return !state().done}function wordTap(i){if(!editable())return;let d=state().data;if(foundTiles().includes(i))return;if(d.path.at(-1)===i){snapshot();d.path.pop();commit();return}if(d.path.includes(i)||d.path.length===4||d.path.length&&!adjacent(d.path.at(-1),i,4)){notice('Use up to four adjacent tiles, without repeating a tile.');return}snapshot();d.path.push(i);commit()}function submitWord(){if(!editable())return;let s=state(),d=s.data,w=d.path.map(i=>letters()[i]).join('');if(words().includes(w)&&!d.found.includes(w)){snapshot();d.routes||={};d.routes[w]=[...d.path];d.found.push(w);d.path=[];msg=`${w} found. ${ {RISK:'Look for possible harm before you act.',DATA:'Protect information throughout its lifecycle.',GIFT:'Check the gift policy before accepting.',CODE:'A code of conduct guides decisions.'}[w]||'Good judgment starts with everyday habits.'}`;if(d.found.length===4)finish();else commit()}else{s.mistakes++;notice('That is not one of today’s four words. Use Hint to find a starting tile.');save()}}
-function trailTap(i){if(!editable())return;let p=state().data.path,cp=checkpoints();if(p.includes(i)){snapshot();p.splice(p.indexOf(i)+1);commit();return}if(!p.length&&cp[i]!==1){notice('Begin at checkpoint 1.');return}if(p.length&&!adjacent(p.at(-1),i,TN)){notice('Move one square horizontally or vertically.');return}let next=p.filter(x=>cp[x]).length+1;if(cp[i]&&cp[i]!==next){notice(`Reach checkpoint ${next} before this one.`);return}if(cp[i]===TK&&p.length!==TC-1){notice(`Fill all ${TC} squares before finishing at checkpoint ${TK}.`);return}snapshot();p.push(i);if(p.length===TC)finish();else commit()}function trailCell(e){let el=document.elementFromPoint(e.clientX,e.clientY);el=el&&el.closest('[data-cell]');return el?+el.dataset.cell:-1}function trailDown(e){if(!editable())return;let i=trailCell(e);if(i<0)return;e.preventDefault();dragging=true;if(state().data.path.at(-1)!==i)trailTap(i)}function trailMove(e){if(!dragging||active!=='trail'||!editable())return;e.preventDefault();let i=trailCell(e),p=state().data.path,last=p.at(-1);if(i<0||last===undefined||i===last)return;if(p.at(-2)===i){snapshot();p.pop();commit();return}if(p.includes(i))return;let lr=Math.floor(last/TN),lc=last%TN,ir=Math.floor(i/TN),ic=i%TN;if(lr!==ir&&lc!==ic)return;let step=lr===ir?Math.sign(ic-lc):Math.sign(ir-lr)*TN;for(let c=last+step;;c+=step){if(state().data.path.includes(c))return;let before=state().data.path.length;trailTap(c);if(state().done||state().data.path.length===before||c===i)return}}document.addEventListener('pointermove',trailMove,{passive:false});document.addEventListener('pointerup',()=>dragging=false);document.addEventListener('pointercancel',()=>dragging=false);
-function selectCell(i){if(givens().includes(i)){notice('That code is fixed. Select a blank cell.');return}selected=i;renderGame()}function put(v){if(!editable())return;if(selected<0){notice('Select an empty cell first.');return}snapshot();state().data.values[selected]=v;commit()}function validLogic(v){let groups=[];for(let r=0;r<4;r++)groups.push(v.slice(r*4,r*4+4));for(let c=0;c<4;c++)groups.push([0,1,2,3].map(r=>v[r*4+c]));for(let r of [0,2])for(let c of [0,2])groups.push([v[r*4+c],v[r*4+c+1],v[(r+1)*4+c],v[(r+1)*4+c+1]]);return groups.every(g=>g.every(v=>v>=1&&v<=4)&&new Set(g).size===4)}function checkLogic(){if(!editable())return;if(validLogic(logicValues()))finish();else{state().mistakes++;save();notice('Not quite. Fill every cell, and check for repeated codes in each row, column, and region.')}}
-function answer(c){if(!editable())return;let s=state(),q=caseAt(s.data.answers.length);if(c!==q[1]){s.mistakes++;save();notice(`${c} is not the primary risk here. ${q[2]} Try again.`);return}snapshot();s.data.answers.push(c);msg='Correct. '+q[2];if(s.data.answers.length===8)finish();else commit()}function move(i,delta){if(!editable())return;let a=state().data.order,j=i+delta;if(j<0||j>=a.length)return;snapshot();[a[i],a[j]]=[a[j],a[i]];commit()}function checkSequence(){if(!editable())return;if(state().data.order.every((v,i)=>v===i))finish();else{state().mistakes++;save();notice('Not yet. Compare the order with the approved playbook, or use a hint to place the next action.')}}
-function undo(){if(!editable()||!history.length)return;state().data=JSON.parse(history.pop());msg='Last move undone.';commit()}function resetGame(){if(!editable()){notice('This daily puzzle is already complete. A new edition arrives tomorrow.');return}snapshot();let old=state();let freshState=fresh(active);old.data=freshState.data;msg='Board reset. Your time and hint count continue.';commit()}function hint(){if(!editable())return;let s=state();s.hints++;snapshot();if(active==='weave'){let row=words().findIndex(w=>!s.data.found.includes(w)),w=words()[row];let start=wordPaths()[row][0];msg=`Look for ${w}. Start at row ${Math.floor(start/4)+1}, column ${start%4+1}, then follow adjacent letters.`;s.data.path=[]}if(active==='trail'){let sol=trailSolution(),p=s.data.path,k=p.findIndex((v,i)=>v!==sol[i]);if(k>=0){p.splice(k);msg='Rewound to the reference route. Try another direction from here.'}else{let next=sol[p.length];p.push(next);msg='Extended your trail by one square.';if(p.length===TC){finish();return}}}if(active==='logic'){let v=logicValues(),sol=logicSolution(),i=v.findIndex((v,i)=>v!==sol[i]);if(i>=0){s.data.values[i]=sol[i];selected=i;msg=`Placed code ${sol[i]} in row ${Math.floor(i/4)+1}, column ${i%4+1}.`}else msg='All codes fit. Check your grid!'}if(active==='office'){let next=['desk','screen','files','board'].find(x=>!s.data.solved.includes(x));msg=next?officeClues()[next].hint:'The exit note gives the order: DESK → SCREEN → FILES → BOARD. Read those four digits from your notebook.'}if(active==='risk')msg='Look for '+caseAt(s.data.answers.length)[1]+': '+caseAt(s.data.answers.length)[2];if(active==='sequence'){let a=s.data.order,i=a.findIndex((v,i)=>v!==i);if(i>=0){let j=a.indexOf(i);a.splice(j,1);a.splice(i,0,i);msg=`Placed action ${i+1}: ${incident().steps[i]}`}else msg='The order is ready. Check your sequence!'}commit()}
-
-function officeDigits(){return [0,1,2,3].map(i=>String(mod(seed()*(i+3)+i*7,9)+1))}
-function officeClues(){let base=mod(seed(),3)*10;return {
-desk:{title:'The desk · Gift register',text:`A note says: “For this exercise, gifts worth MORE THAN ${50+base} credits must be declared.” The register lists five gifts: ${[20,40,60,80,100].map(x=>x+base).join(', ')} credits. How many require a declaration?`,options:['1 gift','2 gifts','3 gifts','4 gifts'],answer:2,hint:`Inspect the desk register. Count only values strictly above ${50+base}; there are three.`,lesson:'Three gifts exceed the stated threshold. Always use the policy that applies to your workplace.'},
-screen:{title:'The screen · Access review',text:'The file contains customer identity records. The approved access list is: Maya (case owner) and Lee (assigned investigator). The share panel lists Maya, Lee, Guest link (anyone), and Former contractor. How many entries must be removed to match the approved list?',options:['0 entries','1 entry','2 entries','4 entries'],answer:2,hint:'On the screen, compare each sharing entry with the two approved names. The public link and former contractor are not approved.',lesson:'Remove the public link and former contractor entry. Access should match the approved business need.'},
-files:{title:'The files · Retention lock',text:`A label says: “Keep this training record until January 1 of the year SEVEN years after its creation year.” The record was created in ${2020+mod(seed(),4)}. Which is the earliest permitted disposal year under this exercise’s rule?`,options:[6,7,8,9].map(n=>String(2020+mod(seed(),4)+n)),answer:1,hint:`For the files, add seven to ${2020+mod(seed(),4)}. The rule specifies a year, so no extra rounding is needed.`,lesson:'Follow the stated retention schedule. Real records may also be subject to preservation holds.'},
-board:{title:'The board · A hidden connection',text:'Three staff are reviewing a supplier: Maya wrote the specification; Noah owns shares in the supplier; Lee independently checked its references. The exercise policy says financial interests must be declared before taking part in selection. Whose connection requires that declaration?',options:['Maya','Noah','Lee','No one'],answer:1,hint:'Read the board’s policy: ownership is a financial interest. Noah owns supplier shares.',lesson:'Noah must disclose the financial interest so it can be assessed and managed before selection.'}}
+const $ = (s) => document.querySelector(s),
+  KEY = "compliance-iq-v1";
+let storageOK = true,
+  store;
+try {
+  store = JSON.parse(localStorage.getItem(KEY) || "{}");
+} catch (e) {
+  store = {};
+  storageOK = false;
 }
-function officeBody(){let d=state().data,spots=['desk','screen','files','board'],names={desk:'Desk',screen:'Screen',files:'Files',board:'Board',door:'Exit door'},clues=officeClues(),spot=d.spot||'desk';let panel='';if(spot==='door'){panel=`<h3>The exit · Four digits to freedom</h3><p>A note above the keypad reads: <strong>DESK → SCREEN → FILES → BOARD</strong>.</p><p>${d.solved.length===4?'All four clues are in your notebook. Enter them in the order above.':'Solve all four room clues before the keypad will unlock.'}</p><form onsubmit="event.preventDefault();unlockOffice()"><label for="office-code">Exit code</label><input class="exit-code" id="office-code" aria-label="Exit code" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="off" placeholder="••••" value="${esc(d.code)}" oninput="state().data.code=this.value.replace(/[^0-9]/g,'').slice(0,4);save()" ${state().done?'disabled':''}><button class="play" style="width:100%" ${state().done?'disabled':''}>${state().done?'Office unlocked ✓':'Unlock the office →'}</button></form>`}else{let q=clues[spot],solved=d.solved.includes(spot);panel=`<div class="eyebrow">Clue ${spots.indexOf(spot)+1} of 4 ${solved?'· solved ✓':''}</div><h3 style="margin-top:9px">${q.title}</h3><p>${q.text}</p>${solved?`<p><strong>Digit discovered: ${officeDigits()[spots.indexOf(spot)]}</strong></p><p class="muted">${q.lesson}</p><button class="outline" onclick="inspectOffice('${spots.find(x=>!d.solved.includes(x))||'door'}')">${d.solved.length===4?'Go to the exit →':'Inspect the next clue →'}</button>`:`<div class="choices">${q.options.map((o,i)=>`<button class="choice" onclick="answerOffice('${spot}',${i})">${o}</button>`).join('')}</div>`}`}
-return `<p class="office-intro">The office is locked for a training challenge. Inspect four objects, solve the clues, and collect the exit code.</p><div class="office-room" role="group" aria-label="Interactive locked office"><div class="office-window" aria-hidden="true"></div><span class="office-caption" aria-hidden="true">NOTICE. THINK. ACT.</span>${[...spots,'door'].map(id=>`<button class="hotspot room-${id} ${spot===id?'focused':''} ${d.solved.includes(id)?'solved':''}" onclick="inspectOffice('${id}')" aria-label="Inspect ${names[id]}${d.solved.includes(id)?', solved':''}">${names[id]}</button>`).join('')}</div><div class="section-head" style="margin-bottom:0"><strong style="font-size:14px">Your clue notebook</strong><span class="muted" style="font-size:12px">${d.solved.length} / 4 found</span></div><div class="notebook">${spots.map((id,i)=>`<div class="clue-digit">${names[id]}<b>${d.solved.includes(id)?officeDigits()[i]:'—'}</b></div>`).join('')}</div><section class="clue-panel" id="office-clue" aria-label="Selected room clue">${panel}</section>`}
-function inspectOffice(id){if(!['desk','screen','files','board','door'].includes(id))return;state().data.spot=id;msg=`Inspecting the ${id==='door'?'exit door':id}.`;commit()}
-function answerOffice(id,answer){if(!editable()||state().data.solved.includes(id))return;let q=officeClues()[id];if(answer!==q.answer){state().mistakes++;msg='Not quite. Re-read the rule on this object and try again.';commit();return}snapshot();state().data.solved.push(id);msg=q.lesson;commit()}
-function unlockOffice(){if(!editable())return;let s=state();if(s.data.solved.length!==4){notice('The keypad needs all four clues. Inspect the remaining objects first.');return}if(s.data.code!==officeDigits().join('')){s.mistakes++;msg='The code does not match. Use the notebook digits in DESK → SCREEN → FILES → BOARD order.';commit();return}finish()}
+if (!store || typeof store !== "object" || Array.isArray(store)) store = {};
+store.days ||= {};
+store.wins ||= {};
+const today = () => {
+  let d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+};
+let day = today();
+const dayNumber = (d) => Math.floor(Date.parse(d + "T00:00:00Z") / 86400000);
+const seed = () => dayNumber(day),
+  mod = (n, m) => ((n % m) + m) % m;
+let active = null,
+  msg = "",
+  history = [],
+  selected = -1,
+  practice = false;
+const games = [
+  {
+    id: "weave",
+    name: "Word Weave",
+    desc: "Find the language of doing the right thing. Four words, one connected board.",
+    time: "3–5 min",
+    type: "Word finding",
+    color: "#efe6b7",
+    icon: ["R", "I", "S", "K", "↳", "D", "A", "T", "A"],
+  },
+  {
+    id: "trail",
+    name: "Audit Trail",
+    desc: "Drag through nine checkpoints. Fill all 49 squares, leave no gap in the evidence.",
+    time: "6–10 min",
+    type: "Path finding",
+    color: "#f3d7c3",
+    icon: ["1", "━", "┓", "┏", "━", "┛", "┗", "━", "2"],
+  },
+  {
+    id: "logic",
+    name: "Access Logic",
+    desc: "A little deduction goes a long way. Balance every access code.",
+    time: "5–8 min",
+    type: "Logic grid",
+    color: "#dbe6d6",
+    icon: ["1", "·", "3", "·", "4", "·", "2", "·", "1"],
+  },
+  {
+    id: "risk",
+    name: "Risk Radar",
+    desc: "Read the situation. Spot the risk hiding in everyday decisions.",
+    time: "3–5 min",
+    type: "Categorization",
+    color: "#dedff0",
+    icon: ["◒", "◇", "△", "◇", "!", "◇", "△", "◇", "◒"],
+  },
+  {
+    id: "sequence",
+    name: "First Response",
+    desc: "When an incident unfolds, put the response in the right order.",
+    time: "3–5 min",
+    type: "Sequencing",
+    color: "#d4e7e9",
+    icon: ["1", "→", "2", "·", "↓", "·", "4", "←", "3"],
+  },
+  {
+    id: "office",
+    name: "The Locked Office",
+    desc: "Search the room. Follow the clues. Four good decisions hold the key to your escape.",
+    time: "5–8 min",
+    type: "Escape room",
+    color: "#e6d7bf",
+    icon: ["▤", "◇", "▥", "⌕", "▣", "⌕", "1", "2", "?"],
+  },
+];
+// Result-screen palette per game: t = surface, c = accent, k = ink on that surface
+const PALETTE = {
+  weave: { t: "#ffe27a", c: "#f08c00", k: "#4a3200" },
+  trail: { t: "#ffbfa6", c: "#ff5a36", k: "#5c1a08" },
+  logic: { t: "#bfe99a", c: "#2f9e44", k: "#123d1c" },
+  risk: { t: "#d0c6ff", c: "#6741d9", k: "#25165e" },
+  sequence: { t: "#a3e6e2", c: "#0c8599", k: "#06363f" },
+  office: { t: "#ffcf96", c: "#e8590c", k: "#4f2405" },
+};
+const CACHE = {};
+function today$(key, f) {
+  const k = key + "@" + seed();
+  return k in CACHE ? CACHE[k] : (CACHE[k] = f());
+}
+function rng(salt, s = seed()) {
+  let h = 2166136261;
+  for (const c of salt + ":" + s) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
+  return (n) => {
+    h = (h + 0x6d2b79f5) | 0;
+    let t = Math.imul(h ^ (h >>> 15), 1 | h);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) % n;
+  };
+}
+function shuf(a, r) {
+  let b = [...a];
+  for (let i = b.length - 1; i > 0; i--) {
+    let j = r(i + 1);
+    [b[i], b[j]] = [b[j], b[i]];
+  }
+  return b;
+}
+// Daily picks from a pool: each lap walks a shuffled order, offset by one per lap, so an
+// item never returns sooner than a full pool's worth of picks later. Multi-pick pools get a
+// fresh order every k laps, before their daily groupings would start to recur.
+function deck(n, k, salt) {
+  let out = [];
+  for (let i = 0; i < k; i++) {
+    let j = seed() * k + i,
+      lap = Math.floor(j / n),
+      order = shuf([...Array(n).keys()], rng(salt, k > 1 ? Math.floor(lap / k) : 0));
+    out.push(order[(j + lap) % n]);
+  }
+  return out;
+}
+// Fills {slot} / {slot2} placeholders; one call shares fills across its strings,
+// while the used-set keeps names and vendors distinct across calls on the same day.
+function filler(r) {
+  let used = new Set();
+  return (...ts) => {
+    let memo = {};
+    return ts.map((t) => {
+      let s = t.replace(/\{(\w+?)\d?\}/g, (m, k) => {
+        if (m in memo) return memo[m];
+        if (k === "amount")
+          return (memo[m] = ((r(90) + 10) * 500).toLocaleString("en-US") + " credits");
+        let pool = SLOTS[k],
+          v;
+        for (let a = 0; a < 20; a++) if (!used.has((v = pool[r(pool.length)]))) break;
+        used.add(v);
+        return (memo[m] = v);
+      });
+      return s;
+    });
+  };
+}
+const cap = (s) => s[0].toUpperCase() + s.slice(1);
+const andList = (a) =>
+  a.length < 2 ? a.join("") : a.slice(0, -1).join(", ") + " and " + a.at(-1);
+const TIPS = Object.fromEntries(WORDS);
+function save() {
+  try {
+    localStorage.setItem(KEY, JSON.stringify(store));
+  } catch (e) {
+    storageOK = false;
+  }
+}
+function daily() {
+  return (store.days[day] ||= {});
+}
+function game() {
+  return games.find((g) => g.id === active);
+}
+const CONTENT_V = 2;
+function state() {
+  let st = (daily()[active] ||= fresh(active));
+  // In-progress boards from an older content version no longer match today's puzzle
+  if (!st.done && st.data.v !== CONTENT_V) st.data = fresh(active).data;
+  return st;
+}
+function fresh(id) {
+  return {
+    elapsed: 0,
+    hints: 0,
+    mistakes: 0,
+    done: false,
+    data: { v: CONTENT_V, ...freshData(id) },
+  };
+}
+function freshData(id) {
+  return id === "weave"
+    ? { path: [], found: [] }
+    : id === "trail"
+      ? { path: [], size: TN }
+      : id === "logic"
+        ? { values: Array(16).fill(0) }
+        : id === "risk"
+          ? { answers: [] }
+          : id === "office"
+            ? { solved: [], spot: "desk", code: "" }
+            : { order: shuffle([0, 1, 2, 3, 4, 5], seed()) };
+}
+function shuffle(a, s) {
+  let b = [...a];
+  for (let i = b.length - 1; i > 0; i--) {
+    s = (s * 1664525 + 1013904223) >>> 0;
+    let j = s % (i + 1);
+    [b[i], b[j]] = [b[j], b[i]];
+  }
+  return b;
+}
+function time(n) {
+  return `${Math.floor(n / 60)}:${String(n % 60).padStart(2, "0")}`;
+}
+function esc(s) {
+  return String(s).replace(
+    /[&<>"']/g,
+    (c) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
+        c
+      ],
+  );
+}
+function snapshot() {
+  history.push(JSON.stringify(state().data));
+  if (history.length > 80) history.shift();
+}
+function commit() {
+  save();
+  renderGame();
+}
+function notice(s) {
+  msg = s;
+  $("#feedback") && ($("#feedback").textContent = s);
+}
+function doneCount() {
+  return games.filter((g) => daily()[g.id]?.done).length;
+}
+function total() {
+  return Object.values(store.wins).reduce(
+    (a, v) => a + Object.keys(v).length,
+    0,
+  );
+}
+function streak() {
+  let n = 0,
+    d = dayNumber(day);
+  if (!store.wins[day]) d--;
+  while (store.wins[new Date(d * 86400000).toISOString().slice(0, 10)]) {
+    n++;
+    d--;
+  }
+  return n;
+}
+function footer() {
+  return `<footer><span>Small puzzles. Sound judgment. A daily practice in doing better.</span><span>${storageOK ? "Saved on this browser · No account needed" : "Browser storage unavailable · Keep this tab open"}</span></footer>`;
+}
+function art(g) {
+  const scenes = {
+    weave: `<g transform="rotate(-8 160 80)"><path d="M73 61H201V107H121V81H241" fill="none" stroke="#b5973d" stroke-width="15" opacity=".35"/>${[
+      ["R", 73, 39],
+      ["I", 113, 39],
+      ["S", 153, 39],
+      ["K", 193, 39],
+      ["D", 113, 85],
+      ["A", 153, 85],
+      ["T", 193, 85],
+      ["A", 233, 85],
+    ]
+      .map(
+        ([c, x, y], i) =>
+          `<rect x="${x}" y="${y + 4}" width="34" height="36" rx="7" fill="#203931" opacity=".12"/><rect x="${x}" y="${y}" width="34" height="36" rx="7" fill="${i < 4 ? "#fffdf5" : "#d7df9a"}"/><text x="${x + 17}" y="${y + 25}" text-anchor="middle" font-size="22" font-weight="750" fill="#203931">${c}</text>`,
+      )
+      .join(
+        "",
+      )}</g><path d="M51 42l5-10m-5 10l-10-3M279 103l8 5m-8-5l2-9" stroke="#9e8437" stroke-width="2"/>`,
+    trail: `<rect x="82" y="20" width="184" height="122" rx="15" fill="#203931" opacity=".1"/><rect x="77" y="14" width="184" height="122" rx="15" fill="#fff8ed"/><path d="M112 44H228V76H111V108H228" fill="none" stroke="#e4b18b" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/><path d="M112 44H228V76H111V108H228" fill="none" stroke="#a64f2c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${[
+      [1],
+      [2],
+      [3],
+    ]
+      .map(
+        ([x, y, n]) =>
+          `<circle cx="${x}" cy="${y}" r="13" fill="#235943"/><text x="${x}" y="${y + 5}" font-size="14" font-weight="700" text-anchor="middle" fill="#fffdf8">${n}</text>`,
+      )
+      .join(
+        "",
+      )}<path d="M58 87l-7 6 7 6m220-51 7 6-7 6" fill="none" stroke="#a64f2c" stroke-width="2"/>`,
+    logic: `<g transform="rotate(5 170 77)"><rect x="111" y="17" width="126" height="126" rx="12" fill="#203931" opacity=".12"/><rect x="105" y="11" width="126" height="126" rx="12" fill="#fffdf6"/>${Array.from({ length: 16 }, (_, i) => `<rect x="${112 + (i % 4) * 29}" y="${18 + Math.floor(i / 4) * 29}" width="25" height="25" rx="4" fill="${[0, 2, 5, 7, 8, 10, 13, 15].includes(i) ? "#b9cba7" : "#eef1e4"}"/>`).join("")}<path d="M168 16V132M110 74H226" stroke="#607858" stroke-width="2"/>${[
+      [1],
+      [3],
+      [4],
+      [2],
+      [2],
+      [4],
+      [3],
+      [1],
+    ]
+      .map(
+        ([x, y, n]) =>
+          `<text x="${x}" y="${y}" text-anchor="middle" font-size="17" font-weight="700" fill="#203931">${n}</text>`,
+      )
+      .join(
+        "",
+      )}</g><path d="M72 52l8 8 15-18M250 111l6 6 12-15" stroke="#60805d" stroke-width="3" fill="none"/>`,
+    risk: `<circle cx="170" cy="77" r="58" fill="#f4f1fa"/><circle cx="170" cy="77" r="44" stroke="#a6a3c0" fill="none"/><circle cx="170" cy="77" r="25" stroke="#a6a3c0" fill="none"/><path d="M170 19V135M112 77H228" stroke="#bcb8d2"/><path d="M170 77L170 19A58 58 0 0 1 222 103Z" fill="#8c9f88" opacity=".3"/><path d="M170 77L210 39" stroke="#235943" stroke-width="3" stroke-linecap="round"/><circle cx="195" cy="54" r="6" fill="#235943"/><circle cx="142" cy="100" r="5" fill="#a38143"/><g transform="rotate(-9 88 57)"><rect x="64" y="33" width="43" height="49" rx="7" fill="#fffdf8"/><path d="M85 43l13 24H72Z" fill="#c9abd7"/><path d="M85 51v7m0 4v1" stroke="#4c3f62" stroke-width="2"/></g><path d="M247 91l17 7v17q-7 11-17 15-11-4-17-15V98Z" fill="#235943"/><path d="M238 109l6 6 13-13" fill="none" stroke="#d7ed98" stroke-width="3"/>`,
+    sequence: `<path d="M92 46H169V103H247" fill="none" stroke="#749ca0" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 7"/><path d="M240 97l8 6-8 6" fill="none" stroke="#527b7f" stroke-width="3"/>${[
+      [73, 22, 1, "#fffdf8"],
+      [146, 51, 2, "#edf3e9"],
+      [221, 80, 3, "#b3c9b4"],
+    ]
+      .map(
+        ([x, y, n, color]) =>
+          `<rect x="${x + 4}" y="${y + 5}" width="53" height="54" rx="10" fill="#203931" opacity=".12"/><rect x="${x}" y="${y}" width="53" height="54" rx="10" fill="${color}"/><text x="${x + 26}" y="${y + 36}" text-anchor="middle" fill="#235943" font-size="30" font-weight="750">${n}</text>`,
+      )
+      .join(
+        "",
+      )}<circle cx="106" cy="112" r="17" fill="#235943"/><path d="M99 112l5 5 10-12" fill="none" stroke="#d7ed98" stroke-width="3"/>`,
+    office: `<path d="M64 132V24L170 9 278 25V132Z" fill="#f9f1dd"/><path d="M170 10V113L278 132V25Z" fill="#c2c8ac"/><path d="M64 132L170 113 278 132 170 150Z" fill="#b59c76"/><path d="M170 10V113" stroke="#97a085" stroke-width="1.5"/><path d="M80 39l43-6v40l-43 6Z" fill="#9abcc0" stroke="#fffdf8" stroke-width="4"/><path d="M101 36v40M81 58l42-6" stroke="#fffdf8" stroke-width="3"/><path d="M211 43l44 7v78l-44-8Z" fill="#52745b" stroke="#f5edd9" stroke-width="4"/><circle cx="246" cy="90" r="2.5" fill="#e5d39d"/><rect x="220" y="66" width="18" height="23" rx="3" fill="#d7ed98"/><path d="M225 68v-4a4 4 0 0 1 8 0v4" fill="none" stroke="#235943" stroke-width="2"/><circle cx="229" cy="76" r="2" fill="#235943"/><path d="M102 98l54-8 40 13-55 10Z" fill="#ae8156"/><path d="M103 99v27m91-23v25m-52-16v28" stroke="#74543a" stroke-width="5"/><path d="M126 71l26-3v23l-26 3Z" fill="#29483d" stroke="#6a7f66" stroke-width="3"/><path d="M132 77l14-2m-14 7l10-1" stroke="#d7ed98" stroke-width="2"/><path d="M180 36l18 3v20l-18-3Z" fill="#d4ad70"/><path d="M183 42l11 2m-11 4l8 2" stroke="#faf4df" stroke-width="2"/><path d="M73 111v17l11 3v-17Z" fill="#697f57"/><path d="M78 113q-15-21 0-16 14-19 7 6 12-9 0 12" fill="#426847"/>`,
+  };
+  return `<div class="art" style="--tint:${g.color}"><svg class="game-illustration" viewBox="0 0 340 160" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><ellipse cx="170" cy="140" rx="105" ry="7" fill="#203931" opacity=".06"/>${scenes[g.id] || ""}</svg></div>`;
+}
 
-function finish(){let s=state();s.done=true;s.score=Math.max(100,1000-s.hints*30-s.mistakes*15);store.wins[day]||={};store.wins[day][active]={score:s.score,time:s.elapsed,hints:s.hints};save();practice=false;results()}function results(){let s=state(),g=game();$('#app').innerHTML=`<div class="game-layout"><section><div class="result"><div class="eyebrow">${g.name} · Daily edition ${mod(seed(),999)+1}</div><div class="medal" aria-hidden="true">✺</div><h2>A sharper instinct.<br>One solve at a time.</h2><p>You completed today’s ${g.name}.</p><div class="stats"><div><strong>${s.score}</strong><span>points</span></div><div><strong>${time(s.elapsed)}</strong><span>solve time</span></div><div><strong>${s.hints}</strong><span>hints used</span></div></div><div class="actions"><button class="play" onclick="home()">Play another game →</button><button class="outline" onclick="copyScore()">Copy score</button></div><p id="copy-status" role="status" style="font-size:13px;margin:12px 0 0">${doneCount()} of ${games.length} daily puzzles complete</p></div><div class="panel"><h3>Take it into your workday</h3><p class="muted">${{office:'A safe workplace depends on noticing small details: declared gifts, restricted access, clear retention rules, and disclosed conflicts.',weave:'Words like risk, duty, and care matter most when they turn into everyday actions.',trail:'A clear audit trail connects decisions to evidence. Avoid gaps and keep records in order.',logic:'Access controls work best when permissions are deliberate, consistent, and reviewed.',risk:'Naming a risk is the first step toward responding well. Raise concerns through your organization’s channels.',sequence:'A calm, structured response protects people and preserves evidence. Follow your organization’s approved playbook.'}[active]}</p><button class="outline" onclick="practice=true;msg='Completed puzzle · Your recorded score is preserved.';renderGame()">See completed puzzle</button></div></section><aside class="panel instructions"><h3>${streak()} day streak ✦</h3><p>A solve in any game keeps your daily streak going.</p><div class="dots">${games.map(g=>`<span class="dot ${daily()[g.id]?.done?'yes':''}">${daily()[g.id]?.done?'✓':'·'}</span>`).join('')}</div><h3>Keep the momentum</h3>${games.filter(g=>g.id!==active).map(g=>`<button class="choice" style="width:100%;margin:5px 0" onclick="openGame('${g.id}')">${g.name} <span style="float:right">${daily()[g.id]?.done?'✓':'→'}</span></button>`).join('')}</aside></div>${footer()}`}
-async function copyScore(){let text=`Compliance IQ · ${day}\n${game().name}: ${state().score} points · ${time(state().elapsed)} · ${state().hints} hints\n${doneCount()}/${games.length} daily puzzles`;try{await navigator.clipboard.writeText(text);$('#copy-status').textContent='Score copied. Share it wherever you like.'}catch(e){$('#copy-status').innerHTML='<label>Copy your result:<textarea readonly style="width:100%;height:100px">'+esc(text)+'</textarea></label>';$('#copy-status textarea').select()}}
-function showStats(){active=null;let badges=[['✦','First instinct','Complete your first puzzle',total()>=1],['✺','Clean sweep','Complete all six in one day',Object.values(store.wins).some(v=>games.every(g=>v[g.id]))],['♜','On a roll','Solve on 3 consecutive days',maxStreak()>=3],['◇','Clear thinker','Complete a puzzle with no hints',Object.values(store.wins).some(v=>Object.values(v).some(x=>x.hints===0))]];$('#app').innerHTML=`<button class="outline" onclick="home()">← Today’s games</button><h1 style="font-size:48px;margin-top:26px">A habit worth keeping.</h1><p class="muted">Your progress stays on this browser.</p><section class="panel"><div class="stats"><div><strong>${total()}</strong><span>puzzles solved</span></div><div><strong>${streak()}</strong><span>current day streak</span></div><div><strong>${maxStreak()}</strong><span>best day streak</span></div></div></section><h2 style="margin-top:30px">Your badges</h2><div class="badge-grid">${badges.map(b=>`<div class="badge ${b[3]?'earned':''}"><b>${b[0]}</b><strong>${b[1]}</strong><br><span>${b[2]}<br>${b[3]?'Unlocked ✓':'Keep going'}</span></div>`).join('')}</div><h2 style="margin-top:30px">Recent solves</h2><section class="panel">${Object.keys(store.wins).sort().reverse().slice(0,7).map(d=>`<div style="margin-bottom:15px"><strong>${d}</strong><div class="muted" style="font-size:14px">${Object.entries(store.wins[d]).map(([id,v])=>`${games.find(g=>g.id===id)?.name}: ${v.score} points (${time(v.time)})`).join(' · ')}</div></div>`).join('')||'<p class="muted">Your first solve is waiting. Pick a game to get started.</p>'}</section>${footer()}`;window.scrollTo(0,0)}function maxStreak(){let dates=Object.keys(store.wins).sort(),max=0,n=0,prev=-Infinity;for(let d of dates){let num=dayNumber(d);n=num===prev+1?n+1:1;max=Math.max(n,max);prev=num}return max}
-setInterval(()=>{if(today()!==day){save();day=today();active=null;home();return}if(active&&!document.hidden&&!state().done){state().elapsed++;let el=$('#timer');if(el)el.textContent=time(state().elapsed);save()}},1000);document.addEventListener('keydown',e=>{if(!active||state().done||['INPUT','TEXTAREA'].includes(e.target.tagName))return;if(active==='logic'&&/^[0-4]$/.test(e.key)){e.preventDefault();put(+e.key)}else if(active==='logic'&&['Backspace','Delete'].includes(e.key)){e.preventDefault();put(0)}else if(active==='trail'&&e.key.startsWith('Arrow')){e.preventDefault();let p=state().data.path,last=p.at(-1);if(last===undefined){trailTap(trailSolution()[0]);return}let delta={ArrowUp:-TN,ArrowDown:TN,ArrowLeft:-1,ArrowRight:1}[e.key],next=last+delta;if(next>=0&&next<TC&&adjacent(last,next,TN))trailTap(next)}else if((e.ctrlKey||e.metaKey)&&e.key==='z'){e.preventDefault();undo()}});home();
+function home() {
+  active = null;
+  history = [];
+  practice = false;
+  let count = doneCount();
+  $("#app").innerHTML =
+    `<section class="hero"><div><div class="eyebrow">The daily brain break · ${new Date(day + "T12:00:00").toLocaleDateString(undefined, { month: "short", day: "numeric" })}</div><h1>A little play.<br>A sharper instinct.</h1><p>Six small challenges for a more thoughtful workday. Build your compliance instincts, one satisfying solve at a time.</p></div><aside class="daily"><div class="eyebrow">Your daily six</div><div style="margin-top:10px"><strong>${count}<span style="font-size:20px;color:var(--muted)"> / ${games.length}</span></strong> <span class="muted">puzzles complete</span></div><div class="dots">${games.map((g, i) => `<span class="dot ${daily()[g.id]?.done ? "yes" : ""}">${daily()[g.id]?.done ? "✓" : i + 1}</span>`).join("")}</div><span style="font-size:13px">${count === games.length ? "A clean sweep. See you tomorrow!" : count ? "Nice momentum. Keep your curiosity going." : "A fresh start. Pick a puzzle below."}</span></aside></section><div class="section-head"><h2>Today’s games</h2><span class="muted">Edition ${mod(seed(), 999) + 1} · New puzzles daily</span></div><section class="cards">${games.map((g) => `<article class="card">${art(g)}<div class="card-body"><div class="meta"><span>${g.type}</span><span>${g.time}</span></div><h3 style="margin-top:12px">${g.name}</h3><p>${g.desc}</p><button class="play" onclick="openGame('${g.id}')"><span>${daily()[g.id]?.done ? "View results" : daily()[g.id] ? "Continue playing" : "Play puzzle"}</span><span>${daily()[g.id]?.done ? "✓" : "↗"}</span></button></div></article>`).join("")}</section><div class="strip"><div><strong>Not a test. A little training for your instincts.</strong><p>Learn as you play, use a hint when you need one, and find your own pace.</p></div><span class="pill">${streak()} day streak ✦</span></div>${footer()}`;
+}
+function openGame(id) {
+  active = id;
+  history = [];
+  selected = -1;
+  practice = false;
+  msg = "";
+  state();
+  save();
+  renderGame();
+  window.scrollTo(0, 0);
+}
+function words() {
+  return today$("words", () =>
+    deck(WORDS.length, 4, "weave").map((i) => WORDS[i][0]),
+  );
+}
+// Tiles the 4 × 4 board into four random snakes of four cells, one per word
+function wordPaths() {
+  return today$("wpaths", () => {
+    let r = rng("weave-board"),
+      cells = Array(16).fill(-1),
+      paths = [],
+      nb = (i) =>
+        [i - 4, i + 4, i % 4 ? i - 1 : -1, i % 4 < 3 ? i + 1 : -1].filter(
+          (v) => v >= 0 && v < 16,
+        );
+    let grow = (k, p) => {
+      if (p.length === 4) {
+        paths[k] = [...p];
+        if (k === 3) return true;
+        let st = cells.indexOf(-1);
+        cells[st] = k + 1;
+        if (grow(k + 1, [st])) return true;
+        cells[st] = -1;
+        return false;
+      }
+      for (let v of shuf(nb(p.at(-1)), r)) {
+        if (cells[v] >= 0) continue;
+        cells[v] = k;
+        p.push(v);
+        if (grow(k, p)) return true;
+        p.pop();
+        cells[v] = -1;
+      }
+      return false;
+    };
+    cells[0] = 0;
+    grow(0, [0]);
+    return shuf(paths, r).map((p) => (r(2) ? p.reverse() : p));
+  });
+}
+function letters() {
+  let cells = Array(16);
+  words().forEach((w, r) =>
+    wordPaths()[r].forEach((i, c) => (cells[i] = w[c])),
+  );
+  return cells;
+}
+function wordOwner(i) {
+  return wordPaths().findIndex((p) => p.includes(i));
+}
+function foundTiles() {
+  let d = state().data;
+  return d.found.flatMap(
+    (w) => d.routes?.[w] || wordPaths()[words().indexOf(w)],
+  );
+}
+function adjacent(a, b, n) {
+  return (
+    Math.abs(Math.floor(a / n) - Math.floor(b / n)) +
+      Math.abs((a % n) - (b % n)) ===
+    1
+  );
+}
+const TN = 7,
+  TC = TN * TN,
+  TK = 9,
+  trailCache = {};
+let dragging = false;
+function trailSolution() {
+  let s = seed();
+  if (trailCache[s]) return trailCache[s];
+  let r = Math.imul(s + 1, 2654435761) >>> 0,
+    rnd = (n) => (
+      (r = (Math.imul(r, 1664525) + 1013904223) >>> 0), (r >>> 16) % n
+    ),
+    p = [];
+  for (let y = 0; y < TN; y++)
+    for (let x = 0; x < TN; x++) p.push(y * TN + (y % 2 ? TN - 1 - x : x));
+  for (let t = 0; t < 6000; t++) {
+    if (rnd(2)) p.reverse();
+    let e = p.at(-1),
+      nb = [
+        e - TN,
+        e + TN,
+        e % TN ? e - 1 : -1,
+        e % TN < TN - 1 ? e + 1 : -1,
+      ].filter((v) => v >= 0 && v < TC && v !== p.at(-2)),
+      v = nb[rnd(nb.length)],
+      tail = p.splice(p.indexOf(v) + 1);
+    p.push(...tail.reverse());
+  }
+  return (trailCache[s] = p);
+}
+function checkpoints() {
+  let sol = trailSolution(),
+    s = seed(),
+    idx = [0];
+  for (let k = 1; k < TK - 1; k++)
+    idx.push(k * 6 + ((Math.imul(s + k * 7919, 2654435761) >>> 13) % 5) - 2);
+  idx.push(TC - 1);
+  return Object.fromEntries(idx.map((v, i) => [sol[v], i + 1]));
+}
+// A random 4 × 4 grid, then givens removed one by one while the solution stays unique
+function logicPuzzle() {
+  return today$("logic", () => {
+    let r = rng("logic"),
+      g = Array(16).fill(0);
+    let ok = (g, i) => {
+      let v = g[i],
+        R = i >> 2,
+        C = i & 3,
+        B = (R >> 1) * 8 + (C >> 1) * 2;
+      for (let k = 0; k < 4; k++) {
+        let a = R * 4 + k,
+          b = k * 4 + C,
+          c = B + (k >> 1) * 4 + (k & 1);
+        if ((a !== i && g[a] === v) || (b !== i && g[b] === v) || (c !== i && g[c] === v))
+          return false;
+      }
+      return true;
+    };
+    let fill = (i) => {
+      if (i === 16) return true;
+      for (let v of shuf([1, 2, 3, 4], r)) {
+        g[i] = v;
+        if (ok(g, i) && fill(i + 1)) return true;
+      }
+      g[i] = 0;
+      return false;
+    };
+    let count = (g, lim) => {
+      let i = g.indexOf(0);
+      if (i < 0) return 1;
+      let n = 0;
+      for (let v = 1; v <= 4 && n < lim; v++) {
+        g[i] = v;
+        if (ok(g, i)) n += count(g, lim - n);
+      }
+      g[i] = 0;
+      return n;
+    };
+    fill(0);
+    let sol = [...g],
+      given = [...Array(16).keys()],
+      target = 5 + r(2);
+    for (let i of shuf(given, r)) {
+      if (given.length <= target) break;
+      let t = sol.map((v, k) => (given.includes(k) && k !== i ? v : 0));
+      if (count(t, 2) === 1) given = given.filter((k) => k !== i);
+    }
+    return { sol, given };
+  });
+}
+function logicSolution() {
+  return logicPuzzle().sol;
+}
+function givens() {
+  return logicPuzzle().given;
+}
+function logicValues() {
+  return logicSolution().map((v, i) =>
+    givens().includes(i) ? v : state().data.values[i],
+  );
+}
+function incident() {
+  return today$("incident", () => {
+    let [title, context, steps] = INCIDENTS[deck(INCIDENTS.length, 1, "incident")[0]],
+      out = filler(rng("incident-fill"))(title, context, ...steps).map(cap);
+    return {
+      title: out[0],
+      context: out[1] + " For this exercise, follow the approved response playbook.",
+      steps: out.slice(2),
+    };
+  });
+}
+// Two situations per risk category each day, drawn from separate decks
+function todayCases() {
+  return today$("risk", () => {
+    let r = rng("risk-fill"),
+      fill = filler(r),
+      list = [];
+    RISK_CATS.forEach((c) =>
+      deck(RISK[c].length, 2, "risk-" + c).forEach((i) => {
+        let [sit, why] = fill(...RISK[c][i]).map(cap);
+        list.push([sit, c, why]);
+      }),
+    );
+    return shuf(list, r);
+  });
+}
+function caseAt(i) {
+  return todayCases()[i % 8];
+}
+const rules = {
+  office: [
+    "Inspect the four objects in the office. Each contains a small compliance puzzle.",
+    "Solve each clue to collect a digit. Your notebook saves everything you discover.",
+    "Select the exit door, then enter the digits in DESK → SCREEN → FILES → BOARD order. This is a fictional training room.",
+  ],
+  weave: [
+    "Find four words, using every tile exactly once.",
+    "Tap adjacent letters horizontally or vertically, then submit the word. Each word has four letters.",
+    "Tap your last tile or Undo to step back. Found words stay highlighted.",
+  ],
+  trail: [
+    "Start at checkpoint 1 and connect all nine checkpoints in numerical order.",
+    "Drag (or tap) horizontally or vertically. Fill all 49 squares exactly once, finishing on checkpoint 9. Arrow keys work too.",
+    "Drag back over your line, or tap an earlier cell, to rewind. A hint extends the reference path, or points out a branch to revisit.",
+  ],
+  logic: [
+    "Fill the 4 × 4 grid with codes 1, 2, 3, and 4.",
+    "Each row, column, and bold 2 × 2 region must contain each code once. Dark numbers are fixed.",
+    "Select a cell, then use the code buttons or keyboard. Any valid completed grid is accepted.",
+  ],
+  risk: [
+    "Read eight workplace situations and identify the primary risk.",
+    "Choose Bribery, Privacy, Conflict, or Fraud. Every choice comes with an explanation.",
+    "A wrong answer stays on the current card so you can learn and try again.",
+  ],
+  sequence: [
+    "Read the response playbook for today’s incident.",
+    "Use the up and down arrows to arrange six actions from first to last.",
+    "The scenario and hint show the approved order for this exercise. Check your sequence when ready.",
+  ],
+};
+function renderGame() {
+  let s = state(),
+    g = game();
+  if (s.done && !practice) {
+    results();
+    return;
+  }
+  let body = "";
+  if (active === "office") body = officeBody();
+  if (active === "weave") {
+    body = `<div class="word-status">${words()
+      .map(
+        (w, i) =>
+          `<span class="tag">${s.data.found.includes(w) ? w + " ✓" : `Word ${i + 1} · 4 letters`}</span>`,
+      )
+      .join(
+        "",
+      )}</div><div class="board grid" style="grid-template-columns:repeat(4,1fr)">${letters()
+      .map(
+        (c, i) =>
+          `<button aria-label="${c}, row ${Math.floor(i / 4) + 1}, column ${(i % 4) + 1}" class="tile ${s.data.path.includes(i) ? "selected" : ""} ${foundTiles().includes(i) ? "found" : ""}" onclick="wordTap(${i})">${c}</button>`,
+      )
+      .join(
+        "",
+      )}</div><div style="text-align:center;letter-spacing:5px;min-height:36px;font-weight:700">${s.data.path.map((i) => letters()[i]).join("") || "· · · ·"}</div><button class="play" style="width:100%;margin-bottom:20px" onclick="submitWord()">Submit word</button>`;
+  }
+  if (active === "trail") {
+    let cp = checkpoints(),
+      path = s.data.path,
+      pt = (i) => `${(i % TN) + 0.5},${Math.floor(i / TN) + 0.5}`;
+    body = `<div class="board trail-board" onpointerdown="trailDown(event)"><div class="grid" style="grid-template-columns:repeat(${TN},1fr);gap:3px">${Array.from({ length: TC }, (_, i) => `<button data-cell="${i}" aria-label="Row ${Math.floor(i / TN) + 1}, column ${(i % TN) + 1}${cp[i] ? ", checkpoint " + cp[i] : ""}${path.includes(i) ? ", visited step " + (path.indexOf(i) + 1) : ""}" class="tile trail-cell ${path.includes(i) ? "visited" : ""} ${path.at(-1) === i ? "last" : ""}" onclick="if(!event.detail)trailTap(${i})"></button>`).join("")}</div><svg class="trail-svg" viewBox="0 0 ${TN} ${TN}" aria-hidden="true">${path.length > 1 ? `<polyline points="${path.map(pt).join(" ")}" fill="none" stroke="#235943" stroke-width=".34" stroke-linecap="round" stroke-linejoin="round"/>` : ""}${path.length ? `<circle cx="${(path.at(-1) % TN) + 0.5}" cy="${Math.floor(path.at(-1) / TN) + 0.5}" r=".2" fill="#c47a29"/>` : ""}${Object.entries(
+      cp,
+    )
+      .map(
+        ([i, n]) =>
+          `<circle cx="${(i % TN) + 0.5}" cy="${Math.floor(i / TN) + 0.5}" r=".33" fill="${path.includes(+i) ? "#235943" : "#203931"}" stroke="#fffdf6" stroke-width=".06"/><text x="${(i % TN) + 0.5}" y="${Math.floor(i / TN) + 0.5}" dy=".14" text-anchor="middle" font-size=".38" font-weight="750" fill="#fff">${n}</text>`,
+      )
+      .join(
+        "",
+      )}</svg></div><p style="text-align:center" class="muted">${path.length} / ${TC} cells · ${Object.keys(cp).filter((i) => path.includes(+i)).length} / ${TK} checkpoints</p>`;
+  }
+  if (active === "logic") {
+    body = `<div class="board grid" style="grid-template-columns:repeat(4,1fr);gap:3px">${logicValues()
+      .map(
+        (v, i) =>
+          `<button class="tile ${selected === i ? "selected" : ""}" style="${givens().includes(i) ? "background:#e3e8d9;color:#203931;" : ""}${i % 4 === 1 ? "border-right:3px solid #56654f;" : ""}${Math.floor(i / 4) === 1 ? "border-bottom:3px solid #56654f;" : ""}" aria-label="Row ${Math.floor(i / 4) + 1}, column ${(i % 4) + 1}, ${v || "empty"}${givens().includes(i) ? ", fixed" : ""}" onclick="selectCell(${i})">${v || ""}</button>`,
+      )
+      .join(
+        "",
+      )}</div><div class="keypad">${[1, 2, 3, 4, 0].map((v) => `<button onclick="put(${v})" aria-label="${v ? "Enter " + v : "Clear cell"}">${v || "⌫"}</button>`).join("")}</div><button class="play" style="width:100%;margin-bottom:20px" onclick="checkLogic()">Check grid</button>`;
+  }
+  if (active === "risk") {
+    let n = s.data.answers.length;
+    body = `<div class="eyebrow">Situation ${n + 1} of 8</div><div class="progress"><i style="width:${(n / 8) * 100}%"></i></div><p class="prompt">${caseAt(n)[0]}</p><div class="choices">${["Bribery", "Privacy", "Conflict", "Fraud"].map((c) => `<button class="choice" onclick="answer('${c}')">${c} <span style="float:right">↗</span></button>`).join("")}</div><p class="hint-copy">Choose the primary risk. More than one issue can exist in a real situation.</p>`;
+  }
+  if (active === "sequence") {
+    body = `<div class="eyebrow">${incident().title}</div><p class="muted" style="font-size:14px;margin-top:10px">${incident().context}</p><details style="font-size:14px"><summary>Read the approved playbook</summary><ol>${incident()
+      .steps.map((t) => `<li>${t}</li>`)
+      .join(
+        "",
+      )}</ol></details><ol class="sequence">${s.data.order.map((v, i) => `<li class="step"><b>${i + 1}</b><span>${incident().steps[v]}</span><button aria-label="Move step ${i + 1} up" ${i === 0 ? "disabled" : ""} onclick="move(${i},-1)">↑</button><button aria-label="Move step ${i + 1} down" ${i === 5 ? "disabled" : ""} onclick="move(${i},1)">↓</button></li>`).join("")}</ol><button class="play" style="width:100%;margin-bottom:20px" onclick="checkSequence()">Check sequence</button>`;
+  }
+  $("#app").innerHTML =
+    `<div class="section-head"><div class="game-title"><button class="outline" onclick="home()" aria-label="Back to game directory">←</button><div><div class="eyebrow">Daily ${game().type} · Edition ${mod(seed(), 999) + 1}</div><h1>${g.name}</h1></div></div></div><div class="game-layout"><section class="panel"><div class="game-top"><span class="pill">${practice ? "Completed puzzle" : g.time + " · Take your time"}</span><span class="timer" id="timer" aria-label="Elapsed time">${time(s.elapsed)}</span></div>${body}<div class="actions"><button class="outline" onclick="undo()" ${!history.length ? "disabled" : ""}>↶ Undo</button><button class="outline" onclick="hint()">✧ Hint</button><button class="outline" onclick="resetGame()">Reset</button></div><div class="message" id="feedback" role="status" aria-live="polite">${esc(msg || "You’ve got this. Take it one move at a time.")}</div></section><aside class="panel instructions"><h3>How to play</h3><ol>${rules[active].map((r) => `<li style="margin-bottom:12px">${r}</li>`).join("")}</ol><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3>A little help is welcome.</h3><p>Hints cost 30 points; incorrect checks cost 15. Time is for your own pace and does not reduce your score.</p><div class="tag">${s.hints} hints used</div><div class="tag">${s.mistakes} incorrect checks</div><p class="hint-copy">Progress saves automatically on this browser. The next edition arrives at local midnight.</p></aside></div>${footer()}`;
+}
+function editable() {
+  return !state().done;
+}
+function wordTap(i) {
+  if (!editable()) return;
+  let d = state().data;
+  if (foundTiles().includes(i)) return;
+  if (d.path.at(-1) === i) {
+    snapshot();
+    d.path.pop();
+    commit();
+    return;
+  }
+  if (
+    d.path.includes(i) ||
+    d.path.length === 4 ||
+    (d.path.length && !adjacent(d.path.at(-1), i, 4))
+  ) {
+    notice("Use up to four adjacent tiles, without repeating a tile.");
+    return;
+  }
+  snapshot();
+  d.path.push(i);
+  commit();
+}
+function submitWord() {
+  if (!editable()) return;
+  let s = state(),
+    d = s.data,
+    w = d.path.map((i) => letters()[i]).join("");
+  if (words().includes(w) && !d.found.includes(w)) {
+    snapshot();
+    d.routes ||= {};
+    d.routes[w] = [...d.path];
+    d.found.push(w);
+    d.path = [];
+    msg = `${w} found. ${TIPS[w] || "Good judgment starts with everyday habits."}`;
+    if (d.found.length === 4) finish();
+    else commit();
+  } else {
+    s.mistakes++;
+    notice(
+      "That is not one of today’s four words. Use Hint to find a starting tile.",
+    );
+    save();
+  }
+}
+function trailTap(i) {
+  if (!editable()) return;
+  let p = state().data.path,
+    cp = checkpoints();
+  if (p.includes(i)) {
+    snapshot();
+    p.splice(p.indexOf(i) + 1);
+    commit();
+    return;
+  }
+  if (!p.length && cp[i] !== 1) {
+    notice("Begin at checkpoint 1.");
+    return;
+  }
+  if (p.length && !adjacent(p.at(-1), i, TN)) {
+    notice("Move one square horizontally or vertically.");
+    return;
+  }
+  let next = p.filter((x) => cp[x]).length + 1;
+  if (cp[i] && cp[i] !== next) {
+    notice(`Reach checkpoint ${next} before this one.`);
+    return;
+  }
+  if (cp[i] === TK && p.length !== TC - 1) {
+    notice(`Fill all ${TC} squares before finishing at checkpoint ${TK}.`);
+    return;
+  }
+  snapshot();
+  p.push(i);
+  if (p.length === TC) finish();
+  else commit();
+}
+function trailCell(e) {
+  let el = document.elementFromPoint(e.clientX, e.clientY);
+  el = el && el.closest("[data-cell]");
+  return el ? +el.dataset.cell : -1;
+}
+function trailDown(e) {
+  if (!editable()) return;
+  let i = trailCell(e);
+  if (i < 0) return;
+  e.preventDefault();
+  dragging = true;
+  if (state().data.path.at(-1) !== i) trailTap(i);
+}
+function trailMove(e) {
+  if (!dragging || active !== "trail" || !editable()) return;
+  e.preventDefault();
+  let i = trailCell(e),
+    p = state().data.path,
+    last = p.at(-1);
+  if (i < 0 || last === undefined || i === last) return;
+  if (p.at(-2) === i) {
+    snapshot();
+    p.pop();
+    commit();
+    return;
+  }
+  if (p.includes(i)) return;
+  let lr = Math.floor(last / TN),
+    lc = last % TN,
+    ir = Math.floor(i / TN),
+    ic = i % TN;
+  if (lr !== ir && lc !== ic) return;
+  let step = lr === ir ? Math.sign(ic - lc) : Math.sign(ir - lr) * TN;
+  for (let c = last + step; ; c += step) {
+    if (state().data.path.includes(c)) return;
+    let before = state().data.path.length;
+    trailTap(c);
+    if (state().done || state().data.path.length === before || c === i) return;
+  }
+}
+document.addEventListener("pointermove", trailMove, { passive: false });
+document.addEventListener("pointerup", () => (dragging = false));
+document.addEventListener("pointercancel", () => (dragging = false));
+function selectCell(i) {
+  if (givens().includes(i)) {
+    notice("That code is fixed. Select a blank cell.");
+    return;
+  }
+  selected = i;
+  renderGame();
+}
+function put(v) {
+  if (!editable()) return;
+  if (selected < 0) {
+    notice("Select an empty cell first.");
+    return;
+  }
+  snapshot();
+  state().data.values[selected] = v;
+  commit();
+}
+function validLogic(v) {
+  let groups = [];
+  for (let r = 0; r < 4; r++) groups.push(v.slice(r * 4, r * 4 + 4));
+  for (let c = 0; c < 4; c++)
+    groups.push([0, 1, 2, 3].map((r) => v[r * 4 + c]));
+  for (let r of [0, 2])
+    for (let c of [0, 2])
+      groups.push([
+        v[r * 4 + c],
+        v[r * 4 + c + 1],
+        v[(r + 1) * 4 + c],
+        v[(r + 1) * 4 + c + 1],
+      ]);
+  return groups.every(
+    (g) => g.every((v) => v >= 1 && v <= 4) && new Set(g).size === 4,
+  );
+}
+function checkLogic() {
+  if (!editable()) return;
+  if (validLogic(logicValues())) finish();
+  else {
+    state().mistakes++;
+    save();
+    notice(
+      "Not quite. Fill every cell, and check for repeated codes in each row, column, and region.",
+    );
+  }
+}
+function answer(c) {
+  if (!editable()) return;
+  let s = state(),
+    q = caseAt(s.data.answers.length);
+  if (c !== q[1]) {
+    s.mistakes++;
+    save();
+    notice(`${c} is not the primary risk here. ${q[2]} Try again.`);
+    return;
+  }
+  snapshot();
+  s.data.answers.push(c);
+  msg = "Correct. " + q[2];
+  if (s.data.answers.length === 8) finish();
+  else commit();
+}
+function move(i, delta) {
+  if (!editable()) return;
+  let a = state().data.order,
+    j = i + delta;
+  if (j < 0 || j >= a.length) return;
+  snapshot();
+  [a[i], a[j]] = [a[j], a[i]];
+  commit();
+}
+function checkSequence() {
+  if (!editable()) return;
+  if (state().data.order.every((v, i) => v === i)) finish();
+  else {
+    state().mistakes++;
+    save();
+    notice(
+      "Not yet. Compare the order with the approved playbook, or use a hint to place the next action.",
+    );
+  }
+}
+function undo() {
+  if (!editable() || !history.length) return;
+  state().data = JSON.parse(history.pop());
+  msg = "Last move undone.";
+  commit();
+}
+function resetGame() {
+  if (!editable()) {
+    notice(
+      "This daily puzzle is already complete. A new edition arrives tomorrow.",
+    );
+    return;
+  }
+  snapshot();
+  let old = state();
+  let freshState = fresh(active);
+  old.data = freshState.data;
+  msg = "Board reset. Your time and hint count continue.";
+  commit();
+}
+function hint() {
+  if (!editable()) return;
+  let s = state();
+  s.hints++;
+  snapshot();
+  if (active === "weave") {
+    let row = words().findIndex((w) => !s.data.found.includes(w)),
+      w = words()[row];
+    let start = wordPaths()[row][0];
+    msg = `Look for ${w}. Start at row ${Math.floor(start / 4) + 1}, column ${(start % 4) + 1}, then follow adjacent letters.`;
+    s.data.path = [];
+  }
+  if (active === "trail") {
+    let sol = trailSolution(),
+      p = s.data.path,
+      k = p.findIndex((v, i) => v !== sol[i]);
+    if (k >= 0) {
+      p.splice(k);
+      msg = "Rewound to the reference route. Try another direction from here.";
+    } else {
+      let next = sol[p.length];
+      p.push(next);
+      msg = "Extended your trail by one square.";
+      if (p.length === TC) {
+        finish();
+        return;
+      }
+    }
+  }
+  if (active === "logic") {
+    let v = logicValues(),
+      sol = logicSolution(),
+      i = v.findIndex((v, i) => v !== sol[i]);
+    if (i >= 0) {
+      s.data.values[i] = sol[i];
+      selected = i;
+      msg = `Placed code ${sol[i]} in row ${Math.floor(i / 4) + 1}, column ${(i % 4) + 1}.`;
+    } else msg = "All codes fit. Check your grid!";
+  }
+  if (active === "office") {
+    let next = ["desk", "screen", "files", "board"].find(
+      (x) => !s.data.solved.includes(x),
+    );
+    msg = next
+      ? officeClues()[next].hint
+      : "The exit note gives the order: DESK → SCREEN → FILES → BOARD. Read those four digits from your notebook.";
+  }
+  if (active === "risk")
+    msg =
+      "Look for " +
+      caseAt(s.data.answers.length)[1] +
+      ": " +
+      caseAt(s.data.answers.length)[2];
+  if (active === "sequence") {
+    let a = s.data.order,
+      i = a.findIndex((v, i) => v !== i);
+    if (i >= 0) {
+      let j = a.indexOf(i);
+      a.splice(j, 1);
+      a.splice(i, 0, i);
+      msg = `Placed action ${i + 1}: ${incident().steps[i]}`;
+    } else msg = "The order is ready. Check your sequence!";
+  }
+  commit();
+}
+
+function officeDigits() {
+  return [0, 1, 2, 3].map((i) => String(mod(seed() * (i + 3) + i * 7, 9) + 1));
+}
+// Each room object picks a clue type for the day and generates its numbers and names
+function officeClues() {
+  return today$("office", () => {
+    let r = rng("office"),
+      f = filler(r),
+      pick = (a) => a[r(a.length)],
+      counted = (n, one, many) => `${n} ${n === 1 ? one : many}`,
+      near = (ans) => {
+        let o = new Set([ans]);
+        while (o.size < 4) o.add(Math.max(0, ans + r(6) - 2));
+        return [...o].sort((a, b) => a - b);
+      },
+      desk;
+    let kind = r(3);
+    if (kind === 0) {
+      let T = pick([50, 75, 100, 120, 150]),
+        vals = Array.from({ length: 6 }, () => {
+          let v;
+          do v = Math.round((T * (30 + r(170))) / 500) * 5;
+          while (v === T);
+          return v;
+        }),
+        n = vals.filter((v) => v > T).length,
+        o = near(n);
+      desk = {
+        title: "The desk · Gift register",
+        text: `A note says: “For this exercise, gifts worth MORE THAN ${T} credits must be declared.” The register lists six gifts: ${vals.join(", ")} credits. How many require a declaration?`,
+        options: o.map((x) => counted(x, "gift", "gifts")),
+        answer: o.indexOf(n),
+        hint: `Count only gifts strictly above ${T}. There ${n === 1 ? "is" : "are"} ${n}.`,
+        lesson: `${counted(n, "gift exceeds", "gifts exceed")} the threshold. Always use the gift policy that applies to your workplace.`,
+      };
+    } else if (kind === 1) {
+      let R = pick([25, 30, 40, 50]),
+        claims = Array.from({ length: 6 }, () => {
+          let a;
+          do a = Math.round((R * (30 + r(200))) / 100);
+          while (a === R);
+          return [a, r(2) === 0];
+        }),
+        n = claims.filter(([a, has]) => a > R && !has).length,
+        o = near(n);
+      desk = {
+        title: "The desk · Expense tray",
+        text: `The tray holds six expense claims. The exercise policy: any claim over ${R} credits needs a receipt. Claims: ${claims.map(([a, has]) => `${a} (${has ? "receipt" : "no receipt"})`).join(", ")}. How many claims must go back for a receipt?`,
+        options: o.map((x) => counted(x, "claim", "claims")),
+        answer: o.indexOf(n),
+        hint: `Look for claims above ${R} that have no receipt. There ${n === 1 ? "is" : "are"} ${n}.`,
+        lesson: "Receipts are the evidence behind every claim. Check the expense policy that applies to you.",
+      };
+    } else {
+      let C = pick([30, 40, 50, 60]),
+        meals = Array.from({ length: 5 }, () => {
+          let p = 2 + r(5),
+            each;
+          do each = Math.round((C * (50 + r(100))) / 500) * 5;
+          while (each === C);
+          return [p * each, p];
+        }),
+        n = meals.filter(([t, p]) => t / p > C).length,
+        o = near(n);
+      desk = {
+        title: "The desk · Hospitality log",
+        text: `Supplier meals are capped at ${C} credits per person in this exercise. The receipts show: ${meals.map(([t, p]) => `${t} for ${p} people`).join(", ")}. How many meals went over the cap?`,
+        options: o.map((x) => counted(x, "meal", "meals")),
+        answer: o.indexOf(n),
+        hint: `Divide each total by the number of people and compare with ${C}. ${counted(n, "meal is", "meals are")} over.`,
+        lesson: "Hospitality caps are per person. Modest, occasional hospitality keeps relationships clean.",
+      };
+    }
+    let res = pick(["customer identity records", "the payroll folder", "a fraud investigation file", "the merger papers", "a complaints case file"]),
+      roles = shuf(["case owner", "assigned investigator", "data protection lead", "team manager", "payroll officer"], r),
+      ok = shuf(NAMES, r).slice(0, 2 + r(2)),
+      bad = shuf(["a guest link (anyone)", "a former contractor", "a personal webmail address", "the all-staff group", "an intern from another team", f("the {vendor} support account")[0]], r).slice(0, 1 + r(3)),
+      so = near(bad.length);
+    let Y = 2014 + r(10),
+      N = pick([3, 5, 6, 7, 10]),
+      hold = r(2) ? Y + N + [-2, -1, 1, 2, 3][r(5)] : 0,
+      due = Math.max(Y + N, hold),
+      years = [...new Set([due, hold ? Math.min(Y + N, hold) : due + 1, due - 1, due + 1, due + 2])].slice(0, 4).sort((a, b) => a - b);
+    let vendor = f("{vendor}")[0],
+      people = shuf(NAMES, r).slice(0, 3),
+      who = r(3),
+      neutral = shuf(["wrote the specification", "checked the references independently", "compared the three quotes", "took the meeting minutes", "checked the delivery dates", "booked the review room"], r),
+      link = pick([`owns shares in ${vendor}`, `is married to ${vendor}’s sales director`, `was given ${f("{gift}")[0]} by ${vendor} last month`, `still receives a share of ${vendor}’s profits`, `has a ${f("{kin}")[0]} who runs ${vendor}`]);
+    return {
+      desk,
+      screen: {
+        title: "The screen · Access review",
+        text: `The share panel for ${res} lists: ${shuf([...ok, ...bad], r).join(", ")}. The approved access list is ${andList(ok.map((n, i) => `${n} (${roles[i]})`))}. How many entries must be removed to match the approved list?`,
+        options: so.map((x) => counted(x, "entry", "entries")),
+        answer: so.indexOf(bad.length),
+        hint: `Compare each share entry with the approved names. ${cap(andList(bad))} ${bad.length > 1 ? "are" : "is"} not approved.`,
+        lesson: `Remove ${bad.length === 1 ? "the unapproved entry" : `all ${bad.length} unapproved entries`}. Access should match the approved business need.`,
+      },
+      files: {
+        title: hold ? "The files · A legal hold" : "The files · Retention lock",
+        text:
+          `A label says: “Keep this record until January 1 of the year ${N} years after it was created.” It was created in ${Y}.` +
+          (hold ? ` A newer sticker reads: “Legal hold. Do not destroy before January 1, ${hold}.”` : "") +
+          " What is the earliest year it may be disposed of?",
+        options: years.map(String),
+        answer: years.indexOf(due),
+        hint: hold
+          ? `The schedule gives ${Y + N}; the hold gives ${hold}. The later date wins: ${due}.`
+          : `Add ${N} to ${Y}: ${due}.`,
+        lesson: hold
+          ? "A legal hold overrides the normal schedule. Records under hold are kept until it lifts."
+          : "Follow the stated retention schedule. Real records may also be subject to preservation holds.",
+      },
+      board: {
+        title: "The board · A hidden connection",
+        text: `Three staff are reviewing ${vendor} as a supplier: ${people.map((p, i) => `${p} ${i === who ? link : neutral[i]}`).join("; ")}. The exercise policy says any personal or financial link to the supplier must be declared before taking part in selection. Whose connection requires that declaration?`,
+        options: [...people, "No one"],
+        answer: who,
+        hint: `Look for a link to ${vendor}. ${people[who]} has one.`,
+        lesson: `${people[who]} must declare the link so it can be assessed and managed before selection.`,
+      },
+    };
+  });
+}
+function officeBody() {
+  let d = state().data,
+    spots = ["desk", "screen", "files", "board"],
+    names = {
+      desk: "Desk",
+      screen: "Screen",
+      files: "Files",
+      board: "Board",
+      door: "Exit door",
+    },
+    clues = officeClues(),
+    spot = d.spot || "desk";
+  let panel = "";
+  if (spot === "door") {
+    panel = `<h3>The exit · Four digits to freedom</h3><p>A note above the keypad reads: <strong>DESK → SCREEN → FILES → BOARD</strong>.</p><p>${d.solved.length === 4 ? "All four clues are in your notebook. Enter them in the order above." : "Solve all four room clues before the keypad will unlock."}</p><form onsubmit="event.preventDefault();unlockOffice()"><label for="office-code">Exit code</label><input class="exit-code" id="office-code" aria-label="Exit code" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="off" placeholder="••••" value="${esc(d.code)}" oninput="state().data.code=this.value.replace(/[^0-9]/g,'').slice(0,4);save()" ${state().done ? "disabled" : ""}><button class="play" style="width:100%" ${state().done ? "disabled" : ""}>${state().done ? "Office unlocked ✓" : "Unlock the office →"}</button></form>`;
+  } else {
+    let q = clues[spot],
+      solved = d.solved.includes(spot);
+    panel = `<div class="eyebrow">Clue ${spots.indexOf(spot) + 1} of 4 ${solved ? "· solved ✓" : ""}</div><h3 style="margin-top:9px">${q.title}</h3><p>${q.text}</p>${solved ? `<p><strong>Digit discovered: ${officeDigits()[spots.indexOf(spot)]}</strong></p><p class="muted">${q.lesson}</p><button class="outline" onclick="inspectOffice('${spots.find((x) => !d.solved.includes(x)) || "door"}')">${d.solved.length === 4 ? "Go to the exit →" : "Inspect the next clue →"}</button>` : `<div class="choices">${q.options.map((o, i) => `<button class="choice" onclick="answerOffice('${spot}',${i})">${o}</button>`).join("")}</div>`}`;
+  }
+  return `<p class="office-intro">The office is locked for a training challenge. Inspect four objects, solve the clues, and collect the exit code.</p><div class="office-room" role="group" aria-label="Interactive locked office"><div class="office-window" aria-hidden="true"></div><span class="office-caption" aria-hidden="true">NOTICE. THINK. ACT.</span>${[...spots, "door"].map((id) => `<button class="hotspot room-${id} ${spot === id ? "focused" : ""} ${d.solved.includes(id) ? "solved" : ""}" onclick="inspectOffice('${id}')" aria-label="Inspect ${names[id]}${d.solved.includes(id) ? ", solved" : ""}">${names[id]}</button>`).join("")}</div><div class="section-head" style="margin-bottom:0"><strong style="font-size:14px">Your clue notebook</strong><span class="muted" style="font-size:12px">${d.solved.length} / 4 found</span></div><div class="notebook">${spots.map((id, i) => `<div class="clue-digit">${names[id]}<b>${d.solved.includes(id) ? officeDigits()[i] : "—"}</b></div>`).join("")}</div><section class="clue-panel" id="office-clue" aria-label="Selected room clue">${panel}</section>`;
+}
+function inspectOffice(id) {
+  if (!["desk", "screen", "files", "board", "door"].includes(id)) return;
+  state().data.spot = id;
+  msg = `Inspecting the ${id === "door" ? "exit door" : id}.`;
+  commit();
+}
+function answerOffice(id, answer) {
+  if (!editable() || state().data.solved.includes(id)) return;
+  let q = officeClues()[id];
+  if (answer !== q.answer) {
+    state().mistakes++;
+    msg = "Not quite. Re-read the rule on this object and try again.";
+    commit();
+    return;
+  }
+  snapshot();
+  state().data.solved.push(id);
+  msg = q.lesson;
+  commit();
+}
+function unlockOffice() {
+  if (!editable()) return;
+  let s = state();
+  if (s.data.solved.length !== 4) {
+    notice(
+      "The keypad needs all four clues. Inspect the remaining objects first.",
+    );
+    return;
+  }
+  if (s.data.code !== officeDigits().join("")) {
+    s.mistakes++;
+    msg =
+      "The code does not match. Use the notebook digits in DESK → SCREEN → FILES → BOARD order.";
+    commit();
+    return;
+  }
+  finish();
+}
+
+function finish() {
+  let s = state();
+  s.done = true;
+  s.score = Math.max(100, 1000 - s.hints * 30 - s.mistakes * 15);
+  store.wins[day] ||= {};
+  store.wins[day][active] = { score: s.score, time: s.elapsed, hints: s.hints };
+  save();
+  practice = false;
+  celebrate = true;
+  results();
+}
+let celebrate = false;
+const ICON = {
+  check: `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  arrow: `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h9m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+};
+const WIN = {
+  weave: "Four words, woven clean.",
+  trail: "Every square accounted for.",
+  logic: "Access, perfectly balanced.",
+  risk: "Eight risks, named.",
+  sequence: "Calm response, right order.",
+  office: "Door open. Case closed.",
+};
+// Redraws today's solved puzzle as the result illustration
+function resultArt(id) {
+  let svg = (inner) =>
+      `<svg class="win-svg" viewBox="0 0 260 260" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`,
+    hue = ["#ff5a36", "#2f8cff", "#f5a300", "#8a5cff"],
+    d = (k) => `style="--d:${k.toFixed(2)}s"`;
+  if (id === "weave") {
+    let L = letters(),
+      paths = wordPaths(),
+      X = (i) => 55 + (i % 4) * 50,
+      Y = (i) => 55 + Math.floor(i / 4) * 50;
+    return svg(
+      paths
+        .map(
+          (p, k) =>
+            `<polyline class="draw" pathLength="1" ${d(0.2 + k * 0.18)} points="${p.map((i) => X(i) + "," + Y(i)).join(" ")}" fill="none" stroke="${hue[k]}" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" opacity=".3"/>`,
+        )
+        .join("") +
+        L.map(
+          (ch, i) =>
+            `<g class="pop" ${d(0.15 + i * 0.03)}><rect x="${X(i) - 19}" y="${Y(i) - 19}" width="38" height="38" rx="9" fill="#fff" stroke="${hue[paths.findIndex((p) => p.includes(i))]}" stroke-width="3"/><text x="${X(i)}" y="${Y(i) + 7}" text-anchor="middle" font-size="20" font-weight="800" fill="#1d2b25">${ch}</text></g>`,
+        ).join(""),
+    );
+  }
+  if (id === "trail") {
+    let own = state().data.path,
+      path = own.length === TC ? own : trailSolution(),
+      cp = checkpoints(),
+      X = (i) => 34 + (i % TN) * 32,
+      Y = (i) => 34 + Math.floor(i / TN) * 32;
+    return svg(
+      Array.from({ length: TC }, (_, i) => `<circle cx="${X(i)}" cy="${Y(i)}" r="3" fill="#1d2b25" opacity=".16"/>`).join("") +
+        `<polyline class="draw slow" pathLength="1" points="${path.map((i) => X(i) + "," + Y(i)).join(" ")}" fill="none" stroke="var(--c)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>` +
+        Object.entries(cp)
+          .map(
+            ([i, n]) =>
+              `<g class="pop" ${d(0.2 + n * 0.17)}><circle cx="${X(+i)}" cy="${Y(+i)}" r="12" fill="var(--k)" stroke="#fff" stroke-width="3"/><text x="${X(+i)}" y="${Y(+i) + 4.5}" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">${n}</text></g>`,
+          )
+          .join(""),
+    );
+  }
+  if (id === "logic") {
+    let sol = logicSolution(),
+      fixed = givens(),
+      X = (i) => 40 + (i % 4) * 46 + (i % 4 > 1 ? 8 : 0),
+      Y = (i) => 40 + Math.floor(i / 4) * 46 + (i > 7 ? 8 : 0);
+    return svg(
+      sol
+        .map(
+          (v, i) =>
+            `<g class="pop" ${d(0.15 + i * 0.04)}><rect x="${X(i)}" y="${Y(i)}" width="42" height="42" rx="9" fill="${fixed.includes(i) ? "var(--k)" : "#fff"}" stroke="var(--c)" stroke-width="${fixed.includes(i) ? 0 : 2.5}"/><text x="${X(i) + 21}" y="${Y(i) + 29}" text-anchor="middle" font-size="21" font-weight="800" fill="${fixed.includes(i) ? "#fff" : "var(--k)"}">${v}</text></g>`,
+        )
+        .join(""),
+    );
+  }
+  if (id === "risk") {
+    let list = todayCases(),
+      color = { Bribery: hue[0], Privacy: hue[1], Conflict: hue[2], Fraud: hue[3] },
+      seen = {};
+    return svg(
+      `<circle cx="130" cy="130" r="104" fill="#fff"/>${[34, 69, 104].map((r) => `<circle cx="130" cy="130" r="${r}" fill="none" stroke="var(--k)" stroke-opacity=".18" stroke-width="1.5"/>`).join("")}<path d="M130 26v208M26 130h208" stroke="var(--k)" stroke-opacity=".14" stroke-width="1.5"/><g class="sweep"><path d="M130 130L130 26A104 104 0 0 1 220 78Z" fill="var(--c)" opacity=".28"/><path d="M130 130L220 78" stroke="var(--c)" stroke-width="3" stroke-linecap="round"/></g>` +
+        list
+          .map(([, c], k) => {
+            let q = RISK_CATS.indexOf(c),
+              m = (seen[c] = (seen[c] || 0) + 1),
+              a = ((q * 90 + (m === 1 ? 28 : 62)) * Math.PI) / 180,
+              rad = m === 1 ? 52 : 84,
+              x = 130 + Math.sin(a) * rad,
+              y = 130 - Math.cos(a) * rad;
+            return `<g class="pop" ${d(0.35 + k * 0.12)}><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="10" fill="${color[c]}" stroke="#fff" stroke-width="3"/></g>`;
+          })
+          .join("") +
+        RISK_CATS.map(
+          (c, q) =>
+            `<text x="${q < 2 ? 246 : 22}" y="${[22, 154, 248, 22][q]}" text-anchor="${q < 2 ? "end" : "start"}" paint-order="stroke" stroke="#fff" stroke-width="4" font-size="12" font-weight="800" fill="${color[c]}">${c}</text>`,
+        ).join(""),
+    );
+  }
+  if (id === "sequence")
+    return svg(
+      incident()
+        .steps.map(
+          (_, i) =>
+            `<g class="slide" ${d(0.15 + i * 0.1)}><rect x="30" y="${28 + i * 35}" width="200" height="27" rx="13.5" fill="#fff"/><circle cx="44" cy="${41.5 + i * 35}" r="10" fill="var(--k)"/><text x="44" y="${46 + i * 35}" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">${i + 1}</text><rect x="62" y="${37 + i * 35}" width="${[118, 96, 128, 84, 110, 74][i]}" height="9" rx="4.5" fill="var(--k)" opacity=".18"/><path d="M206 ${41.5 + i * 35}l4 4 8-9" fill="none" stroke="var(--c)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>`,
+        )
+        .join(""),
+    );
+  let code = officeDigits();
+  return svg(
+    `<rect x="58" y="30" width="144" height="210" rx="6" fill="var(--k)"/><path d="M66 38h128v202H66Z" fill="#fff6d8"/><path class="beam" d="M66 240h128l60 20H6Z" fill="#fff6d8" opacity=".55"/><g class="door"><rect x="66" y="38" width="128" height="202" fill="var(--c)"/><rect x="80" y="54" width="100" height="70" rx="5" fill="#fff" opacity=".22"/><rect x="80" y="138" width="100" height="86" rx="5" fill="#fff" opacity=".22"/><circle cx="176" cy="140" r="6" fill="#fff"/></g>` +
+      code
+        .map(
+          (n, i) =>
+            `<g class="pop" ${d(0.9 + i * 0.12)}><rect x="${76 + i * 28}" y="6" width="24" height="30" rx="6" fill="#fff" stroke="var(--k)" stroke-width="2.5"/><text x="${88 + i * 28}" y="27" text-anchor="middle" font-size="17" font-weight="800" fill="var(--k)">${n}</text></g>`,
+        )
+        .join(""),
+  );
+}
+function results() {
+  let s = state(),
+    g = game(),
+    p = PALETTE[active],
+    sub =
+      s.score === 1000
+        ? "A perfect solve: no hints, no missteps."
+        : s.hints === 0
+          ? "No hints needed. Sharp instincts."
+          : "Solved, and every hint taught you something.",
+    takeaway = {
+      office: "A safe workplace depends on noticing small details: declared gifts, restricted access, clear retention rules, and disclosed conflicts.",
+      weave: "Words like risk, duty, and care matter most when they turn into everyday actions.",
+      trail: "A clear audit trail connects decisions to evidence. Avoid gaps and keep records in order.",
+      logic: "Access controls work best when permissions are deliberate, consistent, and reviewed.",
+      risk: "Naming a risk is the first step toward responding well. Raise concerns through your organization’s channels.",
+      sequence: "A calm, structured response protects people and preserves evidence. Follow your organization’s approved playbook.",
+    }[active],
+    extra =
+      active === "weave"
+        ? `<ul class="takeaways">${words().map((w) => `<li><b>${w}</b> ${TIPS[w]}</li>`).join("")}</ul>`
+        : "",
+    burst = celebrate
+      ? `<div class="burst" aria-hidden="true">${Array.from({ length: 22 }, (_, i) => {
+          let a = (i / 22) * Math.PI * 2 + Math.random() * 0.3,
+            dist = 70 + Math.random() * 90;
+          return `<i style="--x:${(Math.cos(a) * dist).toFixed(0)}px;--y:${(Math.sin(a) * dist - 30).toFixed(0)}px;--r:${(Math.random() * 540 - 270).toFixed(0)}deg;--p:${[p.c, p.k, "#fff", ["#ff5a36", "#2f8cff", "#f5a300", "#8a5cff"][i % 4]][i % 4]};${i % 3 ? "" : "border-radius:50%;width:10px;height:10px"}"></i>`;
+        }).join("")}</div>`
+      : "";
+  celebrate = false;
+  $("#app").innerHTML =
+    `<div class="game-layout"><section><div class="win" style="--t:${p.t};--c:${p.c};--k:${p.k}"><div class="win-copy"><h2 class="win-title">${WIN[active]}</h2><p class="win-sub">${sub} You completed ${g.name}, edition ${mod(seed(), 999) + 1}.</p><dl class="ledger">${[
+      ["Points", `<span id="score" data-to="${s.score}" aria-hidden="true">${s.score}</span><span class="sr">${s.score}</span>`],
+      ["Solve time", time(s.elapsed)],
+      ["Hints used", s.hints],
+      ["Missteps", s.mistakes],
+    ]
+      .map(([k, v], i) => `<div style="--i:${i}"><dt>${k}</dt><i></i><dd>${v}</dd></div>`)
+      .join("")}</dl><div class="actions"><button class="play" onclick="home()">Play another game ${ICON.arrow}</button><button class="outline" onclick="copyScore()">Copy score</button></div><p id="copy-status" role="status" class="win-note">${doneCount()} of ${games.length} daily puzzles complete</p></div><div class="win-art">${resultArt(active)}<div class="stamp" aria-hidden="true">Solved<small>No. ${mod(seed(), 999) + 1}</small></div>${burst}</div></div><div class="panel"><h3>Take it into your workday</h3><p class="muted">${takeaway}</p>${extra}<button class="outline" onclick="practice=true;msg='Completed puzzle · Your recorded score is preserved.';renderGame()">See completed puzzle</button></div></section><aside class="panel instructions"><h3>${streak()}-day streak</h3><p>A solve in any game keeps your daily streak going.</p><div class="chips">${games.map((x) => `<span class="chip ${daily()[x.id]?.done ? "done" : ""} ${x.id === active ? "now" : ""}" style="--c2:${PALETTE[x.id].c}" title="${x.name}${daily()[x.id]?.done ? ", solved" : ""}">${daily()[x.id]?.done ? ICON.check : ""}</span>`).join("")}</div><h3>Keep the momentum</h3>${games
+      .filter((x) => x.id !== active)
+      .map(
+        (x) =>
+          `<button class="next-game" onclick="openGame('${x.id}')"><span class="swatch" style="background:${PALETTE[x.id].t};color:${PALETTE[x.id].k}">${daily()[x.id]?.done ? ICON.check : ""}</span><span class="next-name">${x.name}<small>${daily()[x.id]?.done ? "Solved today" : x.time}</small></span>${ICON.arrow}</button>`,
+      )
+      .join("")}</aside></div>${footer()}`;
+  countUp();
+}
+// Counts the score up from zero; the final value is already in the markup if this never runs
+function countUp() {
+  let el = $("#score");
+  if (
+    !el ||
+    typeof requestAnimationFrame !== "function" ||
+    typeof matchMedia !== "function" ||
+    matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
+  let to = +el.dataset.to,
+    t0 = performance.now() + 350,
+    step = (t) => {
+      let k = Math.max(0, Math.min(1, (t - t0) / 900));
+      el.textContent = Math.round(to * (1 - Math.pow(1 - k, 4)));
+      if (k < 1) requestAnimationFrame(step);
+    };
+  el.textContent = "0";
+  requestAnimationFrame(step);
+}
+async function copyScore() {
+  let text = `Compliance IQ · ${day}\n${game().name}: ${state().score} points · ${time(state().elapsed)} · ${state().hints} hints\n${doneCount()}/${games.length} daily puzzles`;
+  try {
+    await navigator.clipboard.writeText(text);
+    $("#copy-status").textContent = "Score copied. Share it wherever you like.";
+  } catch (e) {
+    $("#copy-status").innerHTML =
+      '<label>Copy your result:<textarea readonly style="width:100%;height:100px">' +
+      esc(text) +
+      "</textarea></label>";
+    $("#copy-status textarea").select();
+  }
+}
+function showStats() {
+  active = null;
+  let badges = [
+    ["✦", "First instinct", "Complete your first puzzle", total() >= 1],
+    [
+      "✺",
+      "Clean sweep",
+      "Complete all six in one day",
+      Object.values(store.wins).some((v) => games.every((g) => v[g.id])),
+    ],
+    ["♜", "On a roll", "Solve on 3 consecutive days", maxStreak() >= 3],
+    [
+      "◇",
+      "Clear thinker",
+      "Complete a puzzle with no hints",
+      Object.values(store.wins).some((v) =>
+        Object.values(v).some((x) => x.hints === 0),
+      ),
+    ],
+  ];
+  $("#app").innerHTML =
+    `<button class="outline" onclick="home()">← Today’s games</button><h1 style="font-size:48px;margin-top:26px">A habit worth keeping.</h1><p class="muted">Your progress stays on this browser.</p><section class="panel"><div class="stats"><div><strong>${total()}</strong><span>puzzles solved</span></div><div><strong>${streak()}</strong><span>current day streak</span></div><div><strong>${maxStreak()}</strong><span>best day streak</span></div></div></section><h2 style="margin-top:30px">Your badges</h2><div class="badge-grid">${badges.map((b) => `<div class="badge ${b[3] ? "earned" : ""}"><b>${b[0]}</b><strong>${b[1]}</strong><br><span>${b[2]}<br>${b[3] ? "Unlocked ✓" : "Keep going"}</span></div>`).join("")}</div><h2 style="margin-top:30px">Recent solves</h2><section class="panel">${
+      Object.keys(store.wins)
+        .sort()
+        .reverse()
+        .slice(0, 7)
+        .map(
+          (d) =>
+            `<div style="margin-bottom:15px"><strong>${d}</strong><div class="muted" style="font-size:14px">${Object.entries(
+              store.wins[d],
+            )
+              .map(
+                ([id, v]) =>
+                  `${games.find((g) => g.id === id)?.name}: ${v.score} points (${time(v.time)})`,
+              )
+              .join(" · ")}</div></div>`,
+        )
+        .join("") ||
+      '<p class="muted">Your first solve is waiting. Pick a game to get started.</p>'
+    }</section>${footer()}`;
+  window.scrollTo(0, 0);
+}
+function maxStreak() {
+  let dates = Object.keys(store.wins).sort(),
+    max = 0,
+    n = 0,
+    prev = -Infinity;
+  for (let d of dates) {
+    let num = dayNumber(d);
+    n = num === prev + 1 ? n + 1 : 1;
+    max = Math.max(n, max);
+    prev = num;
+  }
+  return max;
+}
+setInterval(() => {
+  if (today() !== day) {
+    save();
+    day = today();
+    active = null;
+    home();
+    return;
+  }
+  if (active && !document.hidden && !state().done) {
+    state().elapsed++;
+    let el = $("#timer");
+    if (el) el.textContent = time(state().elapsed);
+    save();
+  }
+}, 1000);
+document.addEventListener("keydown", (e) => {
+  if (
+    !active ||
+    state().done ||
+    ["INPUT", "TEXTAREA"].includes(e.target.tagName)
+  )
+    return;
+  if (active === "logic" && /^[0-4]$/.test(e.key)) {
+    e.preventDefault();
+    put(+e.key);
+  } else if (active === "logic" && ["Backspace", "Delete"].includes(e.key)) {
+    e.preventDefault();
+    put(0);
+  } else if (active === "trail" && e.key.startsWith("Arrow")) {
+    e.preventDefault();
+    let p = state().data.path,
+      last = p.at(-1);
+    if (last === undefined) {
+      trailTap(trailSolution()[0]);
+      return;
+    }
+    let delta = { ArrowUp: -TN, ArrowDown: TN, ArrowLeft: -1, ArrowRight: 1 }[
+        e.key
+      ],
+      next = last + delta;
+    if (next >= 0 && next < TC && adjacent(last, next, TN)) trailTap(next);
+  } else if ((e.ctrlKey || e.metaKey) && e.key === "z") {
+    e.preventDefault();
+    undo();
+  }
+});
+home();
 </script></body></html>
