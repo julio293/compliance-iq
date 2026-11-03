@@ -1651,10 +1651,14 @@ function shareText() {
   let s = state();
   return `I solved today's ${game().name} on Compliance IQ: ${s.score} points in ${time(s.elapsed)}${s.hints ? "" : " with no hints"}. ${doneCount()} of ${games.length} daily puzzles done. Can you beat it?`;
 }
+// Each game and score has a prebuilt page under /s/ whose preview image shows that score
+function shareURL() {
+  return `${SITE}/s/${active}-${state().score}`;
+}
 function shareLinks() {
   let t = shareText(),
-    u = encodeURIComponent(SITE + "/"),
-    both = encodeURIComponent(t + " " + SITE);
+    u = encodeURIComponent(shareURL()),
+    both = encodeURIComponent(t + " " + shareURL());
   return [
     ["LinkedIn", `https://www.linkedin.com/feed/?shareActive=true&text=${both}`],
     ["X", `https://x.com/intent/post?text=${encodeURIComponent(t)}&url=${u}`],
@@ -1664,7 +1668,7 @@ function shareLinks() {
 }
 async function shareNative() {
   try {
-    await navigator.share({ title: "Compliance IQ", text: shareText(), url: SITE + "/" });
+    await navigator.share({ title: "Compliance IQ", text: shareText(), url: shareURL() });
   } catch (e) {}
 }
 function voucherCard(open) {
@@ -1755,7 +1759,7 @@ async function copyVoucher() {
   }
 }
 async function copyScore() {
-  let text = shareText() + " " + SITE;
+  let text = shareText() + " " + shareURL();
   try {
     await navigator.clipboard.writeText(text);
     $("#copy-status").textContent = "Score copied. Share it wherever you like.";
