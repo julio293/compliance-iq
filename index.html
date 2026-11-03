@@ -69,6 +69,37 @@
 .voucher.opening{animation:unlock .8s cubic-bezier(.3,1.3,.5,1) .4s both}
 .voucher.opening .voucher-code code{animation:pop .5s cubic-bezier(.16,1,.3,1) 1.1s both}
 @keyframes unlock{0%{opacity:0;transform:translateY(16px) rotate(-2deg) scale(.94)}100%{opacity:1;transform:none}}
+.locked{position:relative;min-height:440px}
+.locked-content{filter:blur(7px);opacity:.55;user-select:none;max-height:440px;overflow:hidden}
+.locked-overlay{position:absolute;inset:0;display:grid;place-items:center;padding:20px}
+.panel.locked{padding:0}.panel.locked .locked-content{padding:26px}
+.gate{width:min(100%,430px);background:#fffdf8;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 24px 50px -24px #20393166;animation:rise .5s cubic-bezier(.16,1,.3,1) both}
+.gate-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--lime);color:var(--green);margin-bottom:12px}
+.gate-icon svg{width:18px;height:18px}
+.gate h3{font-family:Georgia,serif;font-weight:400;font-size:24px;line-height:1.15;letter-spacing:-.02em;margin:0 0 6px;text-wrap:balance}
+.gate p{font-size:14px;color:var(--muted);margin:0 0 16px}
+.gate-row{display:flex;gap:8px}
+.gate input[type=email]{flex:1;min-width:0;font:inherit;font-size:16px;padding:11px 14px;border:1.5px solid var(--line);border-radius:30px;background:#fff;color:var(--ink)}
+.gate input[type=email]:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px #23594326}
+.gate .play{flex:none}
+.gate-check{display:flex;gap:9px;align-items:flex-start;font-size:13px;color:var(--muted);margin-top:14px;line-height:1.4;cursor:pointer}
+.gate-check input{margin:2px 0 0;width:16px;height:16px;accent-color:var(--green);flex:none}
+.gate .gate-note{font-size:12px;margin:12px 0 0;min-height:1.4em}
+.gate-link{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fffdf8;border-radius:30px;padding:10px 18px;font-weight:650;font-size:14px}
+.code-hidden{filter:blur(6px);user-select:none}
+.voucher-go svg[viewBox="0 0 16 16"]:first-child{margin-right:-2px}
+.breakdown h3{margin-bottom:16px}
+.breakdown h4{font-size:16px;margin:22px 0 6px}
+.bd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.bd-grid div{background:#f3f4ec;border-radius:14px;padding:14px}
+.bd-grid small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:750;color:var(--muted)}
+.bd-grid b{display:block;font-size:19px;letter-spacing:-.01em;margin:4px 0 2px}
+.bd-grid span{font-size:12px;color:var(--muted);line-height:1.35;display:block}
+.history{margin-top:30px}.history h2{margin-top:30px}.history>h2:first-child,.history .locked-content>h2:first-child{margin-top:0}
+.history.locked{min-height:460px}
+.member-note{font-size:13px;margin-top:16px}
+.revealed{animation:unblur .7s cubic-bezier(.16,1,.3,1) both}
+@keyframes unblur{from{filter:blur(7px);opacity:.5}}
 .next-game{display:flex;align-items:center;gap:12px;width:100%;margin:6px 0;padding:10px 12px 10px 10px;border:1px solid var(--line);border-radius:14px;background:#fffdf8;text-align:left;transition:background .15s,transform .15s cubic-bezier(.16,1,.3,1)}
 .next-game:hover{background:#f3f4ec;transform:translateX(2px)}
 .next-game .swatch{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center}
@@ -85,8 +116,8 @@
 @keyframes door{to{transform:scaleX(.38) skewY(-6deg)}}
 @keyframes beam{from{opacity:0}}
 @media(max-width:850px){.win{grid-template-columns:1fr;padding:28px;gap:26px}.win-art{width:min(100%,290px);order:-1;margin:6px 0 10px}}
-@media(max-width:560px){.voucher{grid-template-columns:1fr 96px;-webkit-mask:none;mask:none}.voucher-body{padding:22px 20px}.voucher h3{font-size:22px}.voucher-stub b{font-size:32px}.pips{grid-template-columns:repeat(3,10px);gap:4px}.pips i{width:10px;height:10px}.win{padding:22px 20px 26px;border-radius:22px}.ledger div:first-child dd{font-size:38px}.stamp{width:86px;height:86px;font-size:12px;right:-12px;bottom:-14px}.burst{right:30px;bottom:30px}}
-@media(prefers-reduced-motion:reduce){.share,.voucher,.voucher.opening,.voucher-code code,.pips i.on,.win-title,.win-sub,.ledger div,.win-art,.stamp,.pop,.slide,.chip.now,.beam{animation:none}.draw{animation:none;stroke-dashoffset:0}.sweep,.burst{display:none}.door{animation:none;transform:scaleX(.38) skewY(-6deg)}}
+@media(max-width:560px){.locked,.locked-content{min-height:420px;max-height:none}.gate{padding:20px}.gate-row{flex-direction:column}.gate .play{width:100%}.bd-grid{grid-template-columns:1fr}.voucher{grid-template-columns:1fr 96px;-webkit-mask:none;mask:none}.voucher-body{padding:22px 20px}.voucher h3{font-size:22px}.voucher-stub b{font-size:32px}.pips{grid-template-columns:repeat(3,10px);gap:4px}.pips i{width:10px;height:10px}.win{padding:22px 20px 26px;border-radius:22px}.ledger div:first-child dd{font-size:38px}.stamp{width:86px;height:86px;font-size:12px;right:-12px;bottom:-14px}.burst{right:30px;bottom:30px}}
+@media(prefers-reduced-motion:reduce){.gate,.revealed,.share,.voucher,.voucher.opening,.voucher-code code,.pips i.on,.win-title,.win-sub,.ledger div,.win-art,.stamp,.pop,.slide,.chip.now,.beam{animation:none}.draw{animation:none;stroke-dashoffset:0}.sweep,.burst{display:none}.door{animation:none;transform:scaleX(.38) skewY(-6deg)}}
 </style></head><body><header><nav class="nav"><div class="brand"><span class="logo">iq</span> Compliance IQ</div><small>Your daily moment of clarity</small><button class="pill" onclick="showStats()">Your progress ↗</button></nav></header><main class="wrap" id="app"></main><script>
 "use strict";
 // Daily content bank. Pools are drawn with deck(), which walks a reshuffled copy of each
@@ -1342,8 +1373,11 @@ function finish() {
 let celebrate = false;
 const SITE = "https://game.fyscaltech.com";
 // Reward for solving every game on the same day
+// Email capture endpoint (Cloudflare Worker in work/compliance-iq-leads)
+const LEADS_API = "https://compliance-iq-leads.kellyapp.workers.dev/subscribe";
 const VOUCHER = { offer: "an exclusive discount on Fyscal", code: "COMPLIANCEIQ", url: "https://fyscaltech.com" };
 const ICON = {
+  lock: `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="2" fill="currentColor"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>`,
   check: `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   arrow: `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h9m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
 };
@@ -1484,22 +1518,50 @@ function results() {
       : "";
   let unlockedNow = celebrate && doneCount() === games.length;
   celebrate = false;
-  $("#app").innerHTML =
-    `<div class="game-layout"><section><div class="win" style="--t:${p.t};--c:${p.c};--k:${p.k}"><div class="win-copy"><h2 class="win-title">${WIN[active]}</h2><p class="win-sub">${sub} You completed ${g.name}, edition ${mod(seed(), 999) + 1}.</p><dl class="ledger">${[
+  lastTakeaway = [takeaway, extra];
+  $("#app").innerHTML = resultsHTML(unlockedNow, burst, takeaway, extra, sub);
+  countUp();
+}
+let lastTakeaway = ["", ""];
+function resultsHTML(unlockedNow, burst, takeaway, extra, sub) {
+  let s = state(),
+    g = game(),
+    p = PALETTE[active];
+  gateDrawn = false;
+  return `<div class="game-layout"><section><div class="win" style="--t:${p.t};--c:${p.c};--k:${p.k}"><div class="win-copy"><h2 class="win-title">${WIN[active]}</h2><p class="win-sub">${sub} You completed ${g.name}, edition ${mod(seed(), 999) + 1}.</p><dl class="ledger">${[
       ["Points", `<span id="score" data-to="${s.score}" aria-hidden="true">${s.score}</span><span class="sr">${s.score}</span>`],
       ["Solve time", time(s.elapsed)],
-      ["Hints used", s.hints],
-      ["Missteps", s.mistakes],
     ]
       .map(([k, v], i) => `<div style="--i:${i}"><dt>${k}</dt><i></i><dd>${v}</dd></div>`)
-      .join("")}</dl><div class="actions"><button class="play" onclick="home()">Play another game ${ICON.arrow}</button></div><div class="share" role="group" aria-label="Share your result"><span>Share</span>${shareLinks().map(([n, href]) => `<a class="share-${n.toLowerCase()}" href="${href}" target="_blank" rel="noopener">${n}</a>`).join("")}<button onclick="copyScore()">Copy text</button>${typeof navigator !== "undefined" && navigator.share && typeof matchMedia === "function" && matchMedia("(pointer: coarse)").matches ? '<button onclick="shareNative()">More apps</button>' : ""}</div><p id="copy-status" role="status" class="win-note">${doneCount()} of ${games.length} daily puzzles complete</p></div><div class="win-art">${resultArt(active)}<div class="stamp" aria-hidden="true">Solved<small>No. ${mod(seed(), 999) + 1}</small></div>${burst}</div></div>${voucherCard(unlockedNow)}<div class="panel"><h3>Take it into your workday</h3><p class="muted">${takeaway}</p>${extra}<button class="outline" onclick="practice=true;msg='Completed puzzle · Your recorded score is preserved.';renderGame()">See completed puzzle</button></div></section><aside class="panel instructions"><h3>${streak()}-day streak</h3><p>A solve in any game keeps your daily streak going.</p><div class="chips">${games.map((x) => `<span class="chip ${daily()[x.id]?.done ? "done" : ""} ${x.id === active ? "now" : ""}" style="--c2:${PALETTE[x.id].c}" title="${x.name}${daily()[x.id]?.done ? ", solved" : ""}">${daily()[x.id]?.done ? ICON.check : ""}</span>`).join("")}</div><h3>Keep the momentum</h3>${games
+      .join("")}</dl><div class="actions"><button class="play" onclick="home()">Play another game ${ICON.arrow}</button></div><div class="share" role="group" aria-label="Share your result"><span>Share</span>${shareLinks().map(([n, href]) => `<a class="share-${n.toLowerCase()}" href="${href}" target="_blank" rel="noopener">${n}</a>`).join("")}<button onclick="copyScore()">Copy text</button>${typeof navigator !== "undefined" && navigator.share && typeof matchMedia === "function" && matchMedia("(pointer: coarse)").matches ? '<button onclick="shareNative()">More apps</button>' : ""}</div><p id="copy-status" role="status" class="win-note">${doneCount()} of ${games.length} daily puzzles complete</p></div><div class="win-art">${resultArt(active)}<div class="stamp" aria-hidden="true">Solved<small>No. ${mod(seed(), 999) + 1}</small></div>${burst}</div></div>${voucherCard(unlockedNow)}${breakdown(s, g, takeaway, extra)}</section><aside class="panel instructions"><h3>${streak()}-day streak</h3><p>A solve in any game keeps your daily streak going.</p><div class="chips">${games.map((x) => `<span class="chip ${daily()[x.id]?.done ? "done" : ""} ${x.id === active ? "now" : ""}" style="--c2:${PALETTE[x.id].c}" title="${x.name}${daily()[x.id]?.done ? ", solved" : ""}">${daily()[x.id]?.done ? ICON.check : ""}</span>`).join("")}</div><h3>Keep the momentum</h3>${games
       .filter((x) => x.id !== active)
       .map(
         (x) =>
           `<button class="next-game" onclick="openGame('${x.id}')"><span class="swatch" style="background:${PALETTE[x.id].t};color:${PALETTE[x.id].k}">${daily()[x.id]?.done ? ICON.check : ""}</span><span class="next-name">${x.name}<small>${daily()[x.id]?.done ? "Solved today" : x.time}</small></span>${ICON.arrow}</button>`,
       )
       .join("")}</aside></div>${footer()}`;
-  countUp();
+}
+function breakdown(s, g, takeaway, extra) {
+  let par = parseInt(g.time.split(/[–-]/).pop()),
+    cells = [
+      ["Speed", s.elapsed <= par * 60 ? "Under par" : "Steady pace", `${time(s.elapsed)} against a ${g.time} par`],
+      ["Accuracy", s.mistakes ? `${s.mistakes} misstep${s.mistakes > 1 ? "s" : ""}` : "Flawless", s.mistakes ? "Every misstep is a lesson banked" : "Not a single wrong move"],
+      ["Independence", s.hints ? `${s.hints} hint${s.hints > 1 ? "s" : ""}` : "Unassisted", s.hints ? "Hints cost points, never progress" : "Solved on instinct alone"],
+    ],
+    inner = `<h3>Your full breakdown</h3><div class="bd-grid">${cells.map(([k, v, d]) => `<div><small>${k}</small><b>${v}</b><span>${d}</span></div>`).join("")}</div><h4>Take it into your workday</h4><p class="muted">${takeaway}</p>${extra}<button class="outline" onclick="practice=true;msg='Completed puzzle · Your recorded score is preserved.';renderGame()">See completed puzzle</button>`,
+    all = doneCount() === games.length;
+  return gated(
+    "breakdown",
+    "panel breakdown",
+    inner,
+    gateForm(
+      "results",
+      all ? "Reveal your voucher and full breakdown" : "See your full breakdown",
+      all
+        ? `Enter your email to reveal your voucher code, plus speed, accuracy and the takeaways from ${g.name}.`
+        : `Speed, accuracy and the takeaways from ${g.name}. Enter your email to unlock them.`,
+    ),
+  );
 }
 // Counts the score up from zero; the final value is already in the markup if this never runs
 function countUp() {
@@ -1546,8 +1608,72 @@ function voucherCard(open) {
     left = games.filter((x) => !daily()[x.id]?.done),
     pips = `<div class="pips" aria-hidden="true">${games.map((x, i) => `<i class="${daily()[x.id]?.done ? "on" : ""}" style="--c2:${PALETTE[x.id].c};--i:${i}"></i>`).join("")}</div>`;
   if (left.length)
-    return `<div class="voucher"><div class="voucher-body"><p class="eyebrow">Daily reward</p><h3>Solve all ${games.length} games today to unlock a voucher</h3><p>${done} of ${games.length} done. Finish ${andList(left.map((x) => x.name))} to unlock ${VOUCHER.offer}.</p><button class="voucher-go" onclick="openGame('${left[0].id}')">Play ${left[0].name} ${ICON.arrow}</button></div><div class="voucher-stub">${pips}<b>${left.length}</b><small>to go</small></div></div>`;
-  return `<div class="voucher unlocked ${open ? "opening" : ""}"><div class="voucher-body"><p class="eyebrow">Voucher unlocked</p><h3>All ${games.length} solved. Here's your reward.</h3><p>Use this code for ${VOUCHER.offer}.</p><div class="voucher-code"><code>${esc(VOUCHER.code)}</code><button onclick="copyVoucher()">Copy code</button></div><a class="voucher-go" href="${VOUCHER.url}" target="_blank" rel="noopener">Redeem on Fyscal ${ICON.arrow}</a><p id="voucher-status" role="status" class="voucher-note"></p></div><div class="voucher-stub">${pips}<b>${ICON.check}</b><small>Complete</small></div></div>`;
+    return `<div class="voucher" id="voucher"><div class="voucher-body"><p class="eyebrow">Daily reward</p><h3>Solve all ${games.length} games today to unlock a voucher</h3><p>${done} of ${games.length} done. Finish ${andList(left.map((x) => x.name))} to unlock ${VOUCHER.offer}.</p><button class="voucher-go" onclick="openGame('${left[0].id}')">Play ${left[0].name} ${ICON.arrow}</button></div><div class="voucher-stub">${pips}<b>${left.length}</b><small>to go</small></div></div>`;
+  return `<div class="voucher unlocked ${open ? "opening" : ""}" id="voucher"><div class="voucher-body"><p class="eyebrow">Voucher unlocked</p><h3>All ${games.length} solved. Here's your reward.</h3>${
+    member()
+      ? `<p>Use this code for ${VOUCHER.offer}.</p><div class="voucher-code"><code>${esc(VOUCHER.code)}</code><button onclick="copyVoucher()">Copy code</button></div><a class="voucher-go" href="${VOUCHER.url}" target="_blank" rel="noopener">Redeem on Fyscal ${ICON.arrow}</a>`
+      : `<p>Enter your email to reveal your code for ${VOUCHER.offer}.</p><div class="voucher-code"><code class="code-hidden" aria-hidden="true">XXXXXXXXXXXX</code></div><button class="voucher-go" onclick="focusGate()">${ICON.lock} Reveal my code</button>`
+  }<p id="voucher-status" role="status" class="voucher-note"></p></div><div class="voucher-stub">${pips}<b>${ICON.check}</b><small>Complete</small></div></div>`;
+}
+function member() {
+  return !!store.member?.email;
+}
+// Only the first locked section on a page holds the form; the others point to it
+let gateDrawn = false;
+function gateForm(source, title, text) {
+  if (gateDrawn)
+    return `<button class="gate-link" onclick="focusGate()">${ICON.lock} Unlock with your email</button>`;
+  gateDrawn = true;
+  return `<form class="gate" onsubmit="joinList(event,'${source}')" novalidate><span class="gate-icon" aria-hidden="true">${ICON.lock}</span><h3>${title}</h3><p>${text}</p><div class="gate-row"><label class="sr" for="gate-email">Email address</label><input id="gate-email" type="email" required autocomplete="email" inputmode="email" placeholder="you@company.com"><button class="play" type="submit">Unlock</button></div><label class="gate-check"><input type="checkbox" id="gate-mkt"> Send me Fyscal product news and offers. Unsubscribe anytime.</label><p id="gate-status" role="status" class="gate-note">Free, no password. One email unlocks everything on this browser.</p></form>`;
+}
+function focusGate() {
+  let el = $("#gate-email");
+  el.scrollIntoView({ behavior: "smooth", block: "center" });
+  el.focus({ preventScroll: true });
+}
+function gated(id, cls, inner, form) {
+  return member()
+    ? `<div class="${cls}" id="${id}">${inner}</div>`
+    : `<div class="${cls} locked" id="${id}"><div class="locked-content" inert aria-hidden="true">${inner}</div><div class="locked-overlay">${form}</div></div>`;
+}
+async function joinList(e, source) {
+  e.preventDefault();
+  let email = $("#gate-email").value.trim(),
+    status = $("#gate-status"),
+    btn = $(".gate button");
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+    status.textContent = "That email doesn't look right. Check it and try again.";
+    $("#gate-email").focus();
+    return;
+  }
+  btn.disabled = true;
+  status.textContent = "Unlocking…";
+  try {
+    let r = await fetch(LEADS_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, marketing: $("#gate-mkt").checked, source, gamesDone: doneCount() }),
+    });
+    if (!r.ok) throw Error(r.status);
+  } catch (err) {
+    btn.disabled = false;
+    status.textContent = "We couldn't save your email just now. Check your connection and try again.";
+    return;
+  }
+  store.member = { email, at: new Date().toISOString() };
+  save();
+  if (!active) return showStats(true);
+  // Swap in only the sections that were locked, so the rest of the page doesn't replay its intro
+  let fresh = document.createElement("div");
+  gateDrawn = false;
+  fresh.innerHTML = voucherCard(false) + breakdown(state(), game(), ...lastTakeaway);
+  for (let id of ["breakdown", "voucher"]) {
+    let now = $("#" + id), next = fresh.querySelector("#" + id);
+    if (now && next && now.querySelector(".locked-content, .code-hidden")) {
+      next.classList.add("revealed");
+      now.replaceWith(next);
+    }
+  }
 }
 async function copyVoucher() {
   try {
@@ -1570,8 +1696,9 @@ async function copyScore() {
     $("#copy-status textarea").select();
   }
 }
-function showStats() {
+function showStats(revealed) {
   active = null;
+  gateDrawn = false;
   let badges = [
     ["✦", "First instinct", "Complete your first puzzle", total() >= 1],
     [
@@ -1591,7 +1718,7 @@ function showStats() {
     ],
   ];
   $("#app").innerHTML =
-    `<button class="outline" onclick="home()">← Today’s games</button><h1 style="font-size:48px;margin-top:26px">A habit worth keeping.</h1><p class="muted">Your progress stays on this browser.</p><section class="panel"><div class="stats"><div><strong>${total()}</strong><span>puzzles solved</span></div><div><strong>${streak()}</strong><span>current day streak</span></div><div><strong>${maxStreak()}</strong><span>best day streak</span></div></div></section><h2 style="margin-top:30px">Your badges</h2><div class="badge-grid">${badges.map((b) => `<div class="badge ${b[3] ? "earned" : ""}"><b>${b[0]}</b><strong>${b[1]}</strong><br><span>${b[2]}<br>${b[3] ? "Unlocked ✓" : "Keep going"}</span></div>`).join("")}</div><h2 style="margin-top:30px">Recent solves</h2><section class="panel">${
+    `<button class="outline" onclick="home()">← Today’s games</button><h1 style="font-size:48px;margin-top:26px">A habit worth keeping.</h1><p class="muted">Your progress stays on this browser.</p><section class="panel"><div class="stats"><div><strong>${total()}</strong><span>puzzles solved</span></div><div><strong>${streak()}</strong><span>current day streak</span></div><div><strong>${maxStreak()}</strong><span>best day streak</span></div></div></section>${gated("history", revealed ? "history revealed" : "history", `<h2>Your badges</h2><div class="badge-grid">${badges.map((b) => `<div class="badge ${b[3] ? "earned" : ""}"><b>${b[0]}</b><strong>${b[1]}</strong><br><span>${b[2]}<br>${b[3] ? "Unlocked ✓" : "Keep going"}</span></div>`).join("")}</div><h2>Recent solves</h2><section class="panel">${
       Object.keys(store.wins)
         .sort()
         .reverse()
@@ -1609,7 +1736,7 @@ function showStats() {
         )
         .join("") ||
       '<p class="muted">Your first solve is waiting. Pick a game to get started.</p>'
-    }</section>${footer()}`;
+    }</section>`, gateForm("progress", "See your badges and full history", "Enter your email to unlock your badge collection and every solve on record."))}${member() ? `<p class="muted member-note">Unlocked for ${esc(store.member.email)}</p>` : ""}${footer()}`;
   window.scrollTo(0, 0);
 }
 function maxStreak() {
