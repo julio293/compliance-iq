@@ -528,11 +528,7 @@ function art(g) {
       .join(
         "",
       )}</g><path d="M51 42l5-10m-5 10l-10-3M279 103l8 5m-8-5l2-9" stroke="#9e8437" stroke-width="2"/>`,
-    trail: `<rect x="82" y="20" width="184" height="122" rx="15" fill="#203931" opacity=".1"/><rect x="77" y="14" width="184" height="122" rx="15" fill="#fff8ed"/><path d="M112 44H228V76H111V108H228" fill="none" stroke="#e4b18b" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/><path d="M112 44H228V76H111V108H228" fill="none" stroke="#a64f2c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${[
-      [1],
-      [2],
-      [3],
-    ]
+    trail: `<rect x="82" y="20" width="184" height="122" rx="15" fill="#203931" opacity=".1"/><rect x="77" y="14" width="184" height="122" rx="15" fill="#fff8ed"/><path d="M112 44H228V76H111V108H228" fill="none" stroke="#e4b18b" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/><path d="M112 44H228V76H111V108H228" fill="none" stroke="#a64f2c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${[[112,44,1],[228,76,2],[228,108,3]]
       .map(
         ([x, y, n]) =>
           `<circle cx="${x}" cy="${y}" r="13" fill="#235943"/><text x="${x}" y="${y + 5}" font-size="14" font-weight="700" text-anchor="middle" fill="#fffdf8">${n}</text>`,
@@ -540,16 +536,7 @@ function art(g) {
       .join(
         "",
       )}<path d="M58 87l-7 6 7 6m220-51 7 6-7 6" fill="none" stroke="#a64f2c" stroke-width="2"/>`,
-    logic: `<g transform="rotate(5 170 77)"><rect x="111" y="17" width="126" height="126" rx="12" fill="#203931" opacity=".12"/><rect x="105" y="11" width="126" height="126" rx="12" fill="#fffdf6"/>${Array.from({ length: 16 }, (_, i) => `<rect x="${112 + (i % 4) * 29}" y="${18 + Math.floor(i / 4) * 29}" width="25" height="25" rx="4" fill="${[0, 2, 5, 7, 8, 10, 13, 15].includes(i) ? "#b9cba7" : "#eef1e4"}"/>`).join("")}<path d="M168 16V132M110 74H226" stroke="#607858" stroke-width="2"/>${[
-      [1],
-      [3],
-      [4],
-      [2],
-      [2],
-      [4],
-      [3],
-      [1],
-    ]
+    logic: `<g transform="rotate(5 170 77)"><rect x="111" y="17" width="126" height="126" rx="12" fill="#203931" opacity=".12"/><rect x="105" y="11" width="126" height="126" rx="12" fill="#fffdf6"/>${Array.from({ length: 16 }, (_, i) => `<rect x="${112 + (i % 4) * 29}" y="${18 + Math.floor(i / 4) * 29}" width="25" height="25" rx="4" fill="${[0, 2, 5, 7, 8, 10, 13, 15].includes(i) ? "#b9cba7" : "#eef1e4"}"/>`).join("")}<path d="M168 16V132M110 74H226" stroke="#607858" stroke-width="2"/>${[[124,37,1],[182,37,3],[153,66,4],[211,66,2],[124,95,2],[182,95,4],[153,124,3],[211,124,1]]
       .map(
         ([x, y, n]) =>
           `<text x="${x}" y="${y}" text-anchor="middle" font-size="17" font-weight="700" fill="#203931">${n}</text>`,
@@ -1626,6 +1613,23 @@ function gateForm(source, title, text) {
   gateDrawn = true;
   return `<form class="gate" onsubmit="joinList(event,'${source}')" novalidate><span class="gate-icon" aria-hidden="true">${ICON.lock}</span><h3>${title}</h3><p>${text}</p><div class="gate-row"><label class="sr" for="gate-email">Email address</label><input id="gate-email" type="email" required autocomplete="email" inputmode="email" placeholder="you@company.com"><button class="play" type="submit">Unlock</button></div><label class="gate-check"><input type="checkbox" id="gate-mkt"> Send me Fyscal product news and offers. Unsubscribe anytime.</label><p id="gate-status" role="status" class="gate-note">Free, no password. One email unlocks everything on this browser.</p></form>`;
 }
+// Plain-text body keeps this a simple request (no CORS preflight); the worker parses it as JSON
+async function sendLead() {
+  let lead = store.pendingLead;
+  if (!lead || typeof fetch !== "function") return;
+  try {
+    let r = await fetch(LEADS_API, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=UTF-8" },
+      body: JSON.stringify(lead),
+      keepalive: true,
+    });
+    if (r.ok || r.status === 400) {
+      delete store.pendingLead;
+      save();
+    }
+  } catch (e) {}
+}
 function focusGate() {
   let el = $("#gate-email");
   el.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -1648,20 +1652,10 @@ async function joinList(e, source) {
   }
   btn.disabled = true;
   status.textContent = "Unlocking…";
-  try {
-    let r = await fetch(LEADS_API, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, marketing: $("#gate-mkt").checked, source, gamesDone: doneCount() }),
-    });
-    if (!r.ok) throw Error(r.status);
-  } catch (err) {
-    btn.disabled = false;
-    status.textContent = "We couldn't save your email just now. Check your connection and try again.";
-    return;
-  }
   store.member = { email, at: new Date().toISOString() };
+  store.pendingLead = { email, marketing: $("#gate-mkt").checked, source, gamesDone: doneCount() };
   save();
+  await sendLead();
   if (!active) return showStats(true);
   // Swap in only the sections that were locked, so the rest of the page doesn't replay its intro
   let fresh = document.createElement("div");
@@ -1799,4 +1793,6 @@ document.addEventListener("keydown", (e) => {
   }
 });
 home();
+// Retry a signup that failed to reach the server on an earlier visit
+sendLead();
 </script></body></html>
